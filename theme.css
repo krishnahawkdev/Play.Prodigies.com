@@ -1,0 +1,231 @@
+/* --- Global Container --- */
+.btn-open {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 999999;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #212529;
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/tYzYhkmoRaUWWrPu9iM1_openbtn.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#belldiv {
+  overflow: hidden;
+}
+
+.show .Bellside {
+  bottom: 0;
+  opacity: 1;
+}
+.show .btn-open {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/GGE90OHPQimaJVUaxDuv_closebtn.png");
+}
+@media (max-width: 767px) {
+  .show .btn-open {
+    bottom: 180px;
+  }
+}
+
+/* Bell Side */
+.Bellside {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: #f9fafc;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: -200px;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.Bellside .container {
+  max-width: 585px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  width: 100% !important;
+}
+@media (max-width: 767px) {
+  .Bellside .second_row_of_bells {
+    margin-top: 10px;
+  }
+}
+.Bellside small {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+}
+.Bellside .container .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+@media (max-width: 767px) {
+  .Bellside .container .row {
+    margin-top: 0;
+  }
+}
+.Bellside .wrap_bells {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.Bellside .wrap_bells .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+@media (max-width: 767px) {
+  .Bellside .wrap_bells.second_row_of_bells {
+    margin-top: -5px;
+  }
+}
+.Bellside .box {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (max-width: 767px) {
+  .Bellside .box {
+    margin-bottom: 0;
+  }
+}
+.Bellside .box:before {
+  max-width: 286px;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+@media (max-width: 767px) {
+  .Bellside .box:before {
+    height: 50px;
+  }
+}
+.Bellside .box:hover:before, .Bellside .box.active_bell:before {
+  background-color: transparent;
+}
+.Bellside #c:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/mMI4t2D0R2qJHg2qPuFB_C-Rest.png");
+}
+.Bellside #c:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/GZdq6yFQqyRfUtMdnABw_C-HOVER.png");
+}
+.Bellside #c:active:before, .Bellside #c.active_bell:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/ANX4NQhDSxypfB7tQ2Ba_C-Active.png");
+}
+.Bellside #d:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/D3OmjFmSvSsFvOvtGTPQ_D-Rest.png");
+}
+.Bellside #d:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/CY8Fyva6Rc2tRVGH4eaF_D-HOVER.png");
+}
+.Bellside #d:active:before, .Bellside #d.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/leAANAPJST6jfZnuogsm_D-Active.png);
+}
+.Bellside #e:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/FRj74X9NT4eduep8LGvR_E-Rest.png);
+}
+.Bellside #e:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/IIyzF2RISvimuSvGX3N9_E-HOVER.png);
+}
+.Bellside #e:active:before, .Bellside #e.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/jZbZYrBeQYC2iXmD5BLq_E-Active.png);
+}
+.Bellside #f:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/aA3OngeQxS4cSTubfYwm_F-Rest.png);
+}
+.Bellside #f:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/pzK8D799RxiF3BAOyuo3_F-HOVER.png);
+}
+.Bellside #f:active:before, .Bellside #f.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/MouqDgUGSe4CEZRsjfko_F-Active.png);
+}
+.Bellside #g:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/ItK63fXQEW2kqwkqfYmQ_G-Rest.png);
+}
+.Bellside #g:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/e7mLxaPKRrucdyoE1MO6_G-HOVER.png);
+}
+.Bellside #g:active:before, .Bellside #g.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/HopY3cbTRCHTUzSZmkkw_G-Active.png);
+}
+.Bellside #a:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/dsQ8UBdfSdCpLYCXiLyV_A-Rest.png);
+}
+.Bellside #a:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/I61GWyd5R72mnC7eG1Ja_A-HOVER.png);
+}
+.Bellside #a:active:before, .Bellside #a.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/qi366ZxQMCo8QNRmFkyO_A-Active.png);
+}
+.Bellside #b:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/gGuOBdHhQp6gfWbYvVAg_B-Rest.png);
+}
+.Bellside #b:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/ZSYmML4LSeKYJebFzHE4_B-HOVER.png);
+}
+.Bellside #b:active:before, .Bellside #b.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/JXuZSUioSlaReTMrSKqR_B-Active.png);
+}
+.Bellside #hic:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/b3Wn4UwiTXeE5Vmn2DwR_high-c-rest.png);
+}
+.Bellside #hic:hover:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/CHdRq4yRMGzng5qm8Hmy_high-c-HOVER.png);
+}
+.Bellside #hic:active:before, .Bellside #hic.active_bell:before {
+  background-image: url(https://s3.amazonaws.com/unode1/assets/11794/VrZBF1LYQm6QrQXbs7Eo_high-c-active.png);
+}
+.Bellside #stop {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: orange;
+}
+.Bellside #stopall {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: #20d071;
+}
+.Bellside #stopevery {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: gray;
+}
+.Bellside #wowza {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: purple;
+}

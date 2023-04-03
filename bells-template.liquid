@@ -1,0 +1,187 @@
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+{{ 'crossfade-audio.js' | javascript_link }}
+{{ 'globle.js' | javascript_link }}
+{{ 'theme.css' | stylesheet_link }}
+
+<!--https://s3.amazonaws.com/unode1/assets/11794/ItK63fXQEW2kqwkqfYmQ_G-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/aA3OngeQxS4cSTubfYwm_F-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/FRj74X9NT4eduep8LGvR_E-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/D3OmjFmSvSsFvOvtGTPQ_D-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/GGE90OHPQimaJVUaxDuv_closebtn.png  -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/mMI4t2D0R2qJHg2qPuFB_C-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/gGuOBdHhQp6gfWbYvVAg_B-Rest.png    -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/dsQ8UBdfSdCpLYCXiLyV_A-Rest.png-->
+<!--https://s3.amazonaws.com/unode1/assets/11794/tYzYhkmoRaUWWrPu9iM1_openbtn.png   -->
+<!--https://s3.amazonaws.com/unode1/assets/11794/b3Wn4UwiTXeE5Vmn2DwR_high-c-rest.png  -->
+
+<script>
+    var imageSrcs = [
+      "https://s3.amazonaws.com/unode1/assets/11794/I61GWyd5R72mnC7eG1Ja_A-HOVER.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/ZSYmML4LSeKYJebFzHE4_B-HOVER.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/GZdq6yFQqyRfUtMdnABw_C-HOVER.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/CY8Fyva6Rc2tRVGH4eaF_D-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/IIyzF2RISvimuSvGX3N9_E-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/pzK8D799RxiF3BAOyuo3_F-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/e7mLxaPKRrucdyoE1MO6_G-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/CHdRq4yRMGzng5qm8Hmy_high-c-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/qi366ZxQMCo8QNRmFkyO_A-Active.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/JXuZSUioSlaReTMrSKqR_B-Active.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/ANX4NQhDSxypfB7tQ2Ba_C-Active.png", 
+      "https://s3.amazonaws.com/unode1/assets/11794/leAANAPJST6jfZnuogsm_D-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/jZbZYrBeQYC2iXmD5BLq_E-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/MouqDgUGSe4CEZRsjfko_F-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/HopY3cbTRCHTUzSZmkkw_G-Active.png ",
+      "https://s3.amazonaws.com/unode1/assets/11794/VrZBF1LYQm6QrQXbs7Eo_high-c-active.png"
+    ];
+    preloadImages(imageSrcs);
+    function preloadImages(srcs) {
+      if (!preloadImages.cache) {
+        preloadImages.cache = [];
+      }
+      var img;
+      for (var i = 0; i < srcs.length; i++) {
+        img = new Image();
+        img.src = srcs[i];
+        //console.log(img.src);
+        preloadImages.cache.push(img);
+      }
+    }
+</script>
+
+<!--- Start Bell side --->
+<div id="belldiv" class="show">
+    <button class="btn btn-open" type="button" id="bellshow"></button>
+    <div class="Bellside text-center">
+        <div class="container">
+            <div class="row" id="instrument">
+                <div class="wrap_bells col-md-6">
+                    <div class="row">
+                        <div id="c" class="box col-3"></div>
+                        <div id="d" class="box col-3"></div>
+                        <div id="e" class="box col-3"></div>
+                        <div id="f" class="box col-3"></div>
+                    </div>
+                </div>
+                <div class="wrap_bells second_row_of_bells col-md-6">
+                    <div class="row">
+                        <div id="g" class="box col-3"></div>
+                        <div id="a" class="box col-3"></div>
+                        <div id="b" class="box col-3"></div>
+                        <div id="hic" class="box col-3"></div>
+                    </div>
+                </div>
+            </div>
+            <small>To use the bells, click on them first. Then use keys 1-8 to play the bells on your keyboard.</small>
+        </div>
+    </div>
+</div>
+<!--- End Bell side --->
+
+{{ 'index_1.js' | javascript_link }}
+<script>
+  var parts_player;
+  var live_nodes =0;
+      
+  $(document).ready(function () {
+    // Create PartsPlayer object
+    console.log("about to create player");
+    parts_player = new PartsPlayer();
+    parts_player.load_parts_player_audio();
+    //$("#debug").html(parts_player.crossfade_audio.audio_context.sampleRate);
+  });
+        
+  $(document).ready(function() {
+  
+    $('.box').click(function(){
+      var currentObj=this;  
+      if($(currentObj).hasClass('active_bell')){
+       $(currentObj).removeClass('active_bell');
+       setTimeout(function(){
+         $(currentObj).addClass('active_bell');
+      }, 50); 
+      }else{
+        $(currentObj).addClass('active_bell');
+      }
+      
+      setTimeout(function(){
+        $(currentObj).removeClass('active_bell');
+      }, 500);
+    })
+    
+  }); 
+        
+  $(document).ready(function(){
+     $('#bellshow').click(function (){
+         $("#belldiv").toggleClass("show");
+     })
+  });
+        
+  jQuery(document).keyup(function(event) {
+      var num=getNumberFromKeyEvent(event);
+      var mycls= getCharfun(num);
+      if(mycls.length >0){
+       jQuery('#'+mycls).removeClass('active_bell'); 
+       setTimeout(function(){
+                  jQuery('#'+mycls).addClass('active_bell');
+              }, 50);  
+     
+       }
+       setTimeout(function(){
+                  $('#'+mycls).removeClass('active_bell');
+              }, 500);
+
+  });
+
+  function getNumberFromKeyEvent(event) {
+      if (event.keyCode >= 96 && event.keyCode <= 105) {
+          return event.keyCode - 96;
+      } else if (event.keyCode >= 48 && event.keyCode <= 57) {
+          return event.keyCode - 48;
+      }
+      return null;
+  }
+
+  function getCharfun(keychar) {
+    switch(keychar) { 
+        case 1:  
+            charValue='c';
+            break;
+        case 2:
+            charValue='d';
+            break;
+        case 3:
+            charValue='e'; 
+             break;
+        case 4:
+            charValue='f';
+            break;
+        case 5: 
+            charValue='g';
+            break;
+       case 6: 
+            charValue='a';
+            break;
+        case 7:
+            charValue='b';
+            break;
+        case 8:
+            charValue='hic';
+            break;
+        case 9:
+            charValue="";
+            break;
+        case 0: 
+            charValue="";
+            break;  
+                                            
+        default:
+        charValue="";
+          break;    
+     }
+     return charValue;
+  
+  }
+</script>

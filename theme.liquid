@@ -1,0 +1,366 @@
+<!doctype html>
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+    <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+    <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Changa+One:400,400i|Oswald:300,400,500,600,700" as="fetch" crossorigin="anonymous">
+  <script type="text/javascript">
+  !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Changa+One:400,400i|Oswald:300,400,500,600,700",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage);
+  </script>
+  <!-- End of code snippet for Google Fonts -->
+
+
+  {% comment %}
+    Include all CSS frameworks and common styles
+  {% endcomment %}
+  {{ head_uscreen }}
+  {% include 'seo' %}
+  {{ 'redbull.css' | stylesheet_link }}
+  {{ 'redbull.js' | javascript_link }}
+  {{ 'fonts-prodigies.css' | stylesheet_link }}
+</head>
+
+<body>
+  {{ gtm }}
+  <style>
+    .header .top_menu .top_menu--link,
+    .header .top_menu .top_menu--link:hover,
+    .header .top_menu .dropdown--head-link,
+    .header .top_menu .dropdown--head-link:hover,
+    .top_menu .container a,
+    .top_menu .container a:hover,
+    .top_menu .container .dropdown--body a,
+    .top_menu .container .dropdown--body a:hover {
+      color: #fff;
+    }
+    .top_menu .container .mobile_menu--link,
+    .dropdown--body,
+    .dropdown--body a {
+      border-color: #fff;
+    }
+    .header .dropdown, .header .fas, .header .top_menu--link {
+      color: #ffffff;
+    }
+    .header .top_menu .dropdown--action svg>g>g {
+      fill: #ffffff;
+    }
+    .top_menu .container .mobile_menu--link,
+    .top_menu .container .mobile_menu--exit,
+    .top_menu .container .mobile_menu--exit .far,
+    .dropdown--body {
+      background-color: #009999;
+    }
+    .header {
+      background-color: #009999;
+    }
+    a,
+    .top_menu .container .mobile_menu--link a,
+    .top_menu .container .mobile_menu--link a:hover,
+    .top_menu .container .mobile_menu--link a:focus,
+    .top_menu .container .mobile_menu--link,
+    .top_menu .container .mobile_menu--link:hover {
+      color: #fff;
+    }
+    .top_menu .container .mobile_menu--link a svg>g>g {
+      fill: #fff;
+    }
+    html, body {
+      background-color: {{ settings.common.background_color }};
+    }
+    .program--category-link {
+      background: {{ settings.common.primary_color }};
+    }
+    .btn--light:hover {
+      background-color: {{ settings.common.primary_color }};
+    }
+    .cce--upgrade-button, .btn--primary, .btn--outline {
+      background: {{ settings.common.primary_color }};
+    }
+    .primary-hover-color:hover {
+      color: {{ settings.common.primary_color }} !important;
+    }
+    .author--profile {
+      border-color: {{ settings.common.primary_color }};
+      color: {{ settings.common.primary_color }};
+    }
+    .tabs .tab.active {
+      color: {{ settings.common.primary_color }};
+    }
+    .tabs .tab.active svg > g > g {
+      fill: {{ settings.common.primary_color }};
+    }
+    .testimonial svg #theme-1 {
+      fill: {{ settings.common.primary_color }};
+    }
+    .categories-home-page--block h3 {
+      color: {{ settings.page_blocks.categories_home_page.text_color }};
+    }
+    .coming-soon--block h3 {
+      color: {{ settings.page_blocks.coming_soon.text_color }};
+    }
+    .cce--document-chapter.cce--video-active .cce--document-icon svg,
+    .cce--document-chapter.cce--video-active .cce--video-icon svg,
+    .cce--document-chapter:hover .cce--document-icon svg,
+    .cce--document-chapter:hover .cce--video-icon svg,
+    .cce--video-chapter.cce--video-active .cce--document-icon svg,
+    .cce--video-chapter.cce--video-active .cce--video-icon svg,
+    .cce--video-chapter:hover .cce--document-icon svg,
+    .cce--video-chapter:hover .cce--video-icon svg {
+      fill: {{ settings.common.primary_color }} !important;
+    }
+    .cce .vjs-volume-panel .vjs-volume-level,
+    .cce .vjs-play-progress {
+      background-color: {{ settings.common.primary_color | to_rgba, opacity: 0.8 }} !important;
+    }
+    .cce .vjs-load-progress {
+      background-color: {{ settings.common.primary_color | to_rgba, opacity: 0.2 }} !important;
+    }
+    @media only screen and (max-width:767px) {
+      .hero_banner .top_menu .container a, .hero_banner .top_menu .container a:hover {
+        color: {{ settings.common.primary_color }};
+      }
+    }
+
+  .category-group:nth-last-child(-n+4){
+height: 0px;
+visibility: hidden;
+}
+
+.custom-header-wrap {
+  margin: 0 auto;
+  display:flex !important;
+  align-items:center !important;
+}
+
+  </style>
+  {{ header_uscreen }}
+  {% unless template == 'index' %}
+    {% include 'header' %}
+  {% endunless %}
+  <main id="page">
+    <div class="page">
+      {{ content_for_layout }}
+    </div>
+    {% include 'footer' %}
+  </main>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+{{ 'globle.js' | javascript_link }}
+{{ 'theme.css' | stylesheet_link }}
+
+<script>
+    var imageSrcs = [
+      "https://s3.amazonaws.com/unode1/assets/11794/I61GWyd5R72mnC7eG1Ja_A-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/ZSYmML4LSeKYJebFzHE4_B-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/GZdq6yFQqyRfUtMdnABw_C-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/CY8Fyva6Rc2tRVGH4eaF_D-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/IIyzF2RISvimuSvGX3N9_E-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/pzK8D799RxiF3BAOyuo3_F-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/e7mLxaPKRrucdyoE1MO6_G-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/CHdRq4yRMGzng5qm8Hmy_high-c-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/qi366ZxQMCo8QNRmFkyO_A-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/JXuZSUioSlaReTMrSKqR_B-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/ANX4NQhDSxypfB7tQ2Ba_C-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/leAANAPJST6jfZnuogsm_D-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/jZbZYrBeQYC2iXmD5BLq_E-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/MouqDgUGSe4CEZRsjfko_F-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/HopY3cbTRCHTUzSZmkkw_G-Active.png ",
+      "https://s3.amazonaws.com/unode1/assets/11794/VrZBF1LYQm6QrQXbs7Eo_high-c-active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/WtzMM0ikThKqQH3lAkLK_1-ASharp-HOVERLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/HLrdmAvRQMSY9WLAjnsU_1-ASharp-ActiveLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/KS93cXPRceN6sUumq9Fg_2-CSharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/Di0l6o3Sgu6AzjIXP9Mi_2-CSharp-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/j6sR2gEJS0Gdtbl9fOfk_3-DSharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/cQpmXoe5SjWPjqewgVqQ_3-DSharp-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/GFx2K3vLTcqNOA87Iavo_4-FSharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/Axlg1TnvQNiT9GtXytow_4-FSharp-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/tyOlKC2ZSbO1tuM6UKEt_5-GSharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/u0eZefTQa6DXF8FGDwgQ_5-GSharp-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/rwzYq1MeSMmvjsyc31cl_6-ASharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/42NIA9EjQ160m1LRi5Da_6-ASharp-Active_1.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/0IL7GniQEaP5Z5oWwUfw_7-high-cSharpHOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/n6kcD5KkSJGeNHjTPNot_7-high-cSharp-active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/oeg3vF2Q61BNptYAta8g_8-high-dSharp-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/4Oe5ao0QaCLK1K3Ib3gw_8-high-dSharp-active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/qrUNc6DfTqJEbnT2UU1H_1-A-HOVERLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/0pXXM0DGQMOHa2bgQEnf_1-A-ActiveLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/1UKHlrk4Qwqwyzq1fefU_2-B-HOVERLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/u79c5PGOTSKmKlTUqKgR_2-B-ActiveLow.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/qJJkzM8ToOlkUepWJSGq_3-C-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/0msjdC4QSi1QyaXT7Qm7_3-C-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/Cq1Qr0CJQnSLtXpW3TG8_4-D-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/Waam3l1VSM6OoVEEakf0_4-D-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/k8YQgOZWSqyT0ToHE6fz_5-E-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/w3yDTiRuQu6VfSlXasmV_5-E-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/hJMvkza1Q7eevFD8IrKV_6-F-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/8yiQW6olQKGyEl5jVr3L_6-F-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/6pvSpFxHTAyRBlrPYfIs_7-G-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/pJXkGXgFRmKDR8sKZkEP_7-G-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/V5ZAmt6rSaC0Qewv0Dwu_8-A-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/HxPHpVeRzOZIuL0ZNbcR_8-A-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/iGjVJz8ITiuaE2lFW2JP_9-B-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/Ku1aB4EAS4mZBG8ibW9B_9-B-Active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/hWlU5RYeQiebjjF2gJ4I_10-high-c-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/er67mpXtTP2MazcUSABy_10-high-c-active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/lVIjxuoNQcy3BHmG8fkC_11-high-d-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/vIRMXUsWTBemMk5gAep4_11-high-d-active.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/GKD17pQ9S9is9tPBL1nN_12-high-e-HOVER.png",
+      "https://s3.amazonaws.com/unode1/assets/11794/gSBF7nyKSWaikvmTgE4e_12-high-e-active.png"
+    ];
+    preloadImages(imageSrcs);
+    function preloadImages(srcs) {
+      if (!preloadImages.cache) {
+        preloadImages.cache = [];
+      }
+      var img;
+      for (var i = 0; i < srcs.length; i++) {
+        img = new Image();
+        img.src = srcs[i];
+        //console.log(img.src);
+        preloadImages.cache.push(img);
+      }
+    }
+</script>
+
+<!--- Start Bell side --->
+
+<audio data-key="Digit1" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/i0XOnzxS0GcGKmGs40P7_C.mp3"></audio>
+<audio data-key="Digit2" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Pw0Lc1cPSia0caOEN6Zb_D.mp3"></audio>
+<audio data-key="Digit3" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/XUCIVW41QLL4iHbfxJsQ_E.mp3"></audio>
+<audio data-key="Digit4" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/dWLzNJSNRHebJFPVcEyw_F.mp3"></audio>
+<audio data-key="Digit5" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/m2WEDRnaREmfU08sU8Jz_G.mp3"></audio>
+<audio data-key="Digit6" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/omooYwTBugL1z90K3rQu_A.mp3"></audio>
+<audio data-key="Digit7" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/rhbbZcMTkKDzajK6ut7w_B.mp3"></audio>
+<audio data-key="Digit8" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/3ZbKhL8DQ6SE7Y87bFgg_Hi-C.mp3"></audio>
+
+
+<div id="belldiv" class="show hidden">
+    <button class="btn btn-open" type="button" id="bellshow"></button>
+    <div class="Bellside text-center">
+        <div class="container">
+            <div class="row" id="instrument">
+                <div class="wrap_bells col-md-6">
+                    <div class="row">
+                        <div id="c" class="box col-3 bells-btn bells-btn-8" data-key="Digit1"></div>
+                        <div id="d" class="box col-3 bells-btn bells-btn-8" data-key="Digit2"></div>
+                        <div id="e" class="box col-3 bells-btn bells-btn-8" data-key="Digit3"></div>
+                        <div id="f" class="box col-3 bells-btn bells-btn-8" data-key="Digit4"></div>
+                    </div>
+                </div>
+                <div class="wrap_bells second_row_of_bells col-md-6">
+                    <div class="row">
+                        <div id="g" class="box col-3 bells-btn bells-btn-8" data-key="Digit5"></div>
+                        <div id="a" class="box col-3 bells-btn bells-btn-8" data-key="Digit6"></div>
+                        <div id="b" class="box col-3 bells-btn bells-btn-8" data-key="Digit7"></div>
+                        <div id="hic" class="box col-3 bells-btn bells-btn-8" data-key="Digit8"></div>
+                    </div>
+                </div>
+            </div>
+            <small>To use the bells, click on them first. Then use keys 1-8 to play the bells on your keyboard.</small>
+        </div>
+    </div>
+</div>
+<!--- End Bell side --->
+
+<!--- Start Bell side 20 --->
+
+<audio data-key="Digit2" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/rr6uOBikScq2hFHwN30a_1-LowASharpBellSound.mp3"></audio>
+<audio data-key="Digit4" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/3cROCFcmSLahaQjcSTfQ_2-CSharpBellSound.mp3"></audio>
+<audio data-key="Digit5" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/CgGAKc4Siq3nyGUtcWET_3-DSharpBellSound.mp3"></audio>
+<audio data-key="Digit7" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/wU5yvfChQlOHJgxwZOmz_4-FSharpBellSound.mp3"></audio>
+<audio data-key="Digit8" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/j4BZEpZYQqeFZETZo0S3_6-ASharpBellSound.mp3"></audio>
+<audio data-key="Digit9" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/ZFll1YhTSfeHjpDk4xeV_5-GSharpBellSound.mp3"></audio>
+<audio data-key="Minus" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/ukQJAaREQqasPENUdY0j_7-HighCSharpBellSound.mp3"></audio>
+<audio data-key="Equal" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Q2686BfiQ6oqe1ogb4iG_8-HighDSharpBellSound.mp3"></audio>
+
+
+
+
+<audio data-key="KeyQ" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/pSu2Q9rTyi6EGkKYdUI4_1-LowABellSound.mp3"></audio>
+<audio data-key="KeyW" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/1Q7DLG0MROOaf1aPsSZF_2-LowBBellSound.mp3"></audio>
+<audio data-key="KeyE" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/g7f9S3o6TrGnSGGMaRaB_3-CBellSound.mp3"></audio>
+<audio data-key="KeyR" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Cv1kqM8HTMKhrioF67AY_4-DBellSound.mp3"></audio>
+<audio data-key="KeyT" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/a0NPdn29R69dL01wv9Ak_5-EBellSound.mp3"></audio>
+<audio data-key="KeyY" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/p1jokNmVTh67AtjJw7On_6-FBellSound.mp3"></audio>
+<audio data-key="KeyU" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/2EWfSM8TrKAZseeTK82U_7-GBellSound.mp3"></audio>
+<audio data-key="KeyI" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/F6zEpjrRei2iO2SC6Jdg_8-ABellSound.mp3"></audio>
+<audio data-key="KeyO" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/hSUuBvBQoq09vebcpi2Q_9-BBellSound.mp3"></audio>
+<audio data-key="KeyP" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/qoI1viEHRyiyxhITDqj0_10-HighCBellSound.mp3"></audio>
+<audio data-key="BracketLeft" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/MGQkhn0zQ2s8Z02OaWgJ_11-HighDBellSound.mp3"></audio>
+<audio data-key="BracketRight" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/FdMQNZwQPqWBh4eGREvb_12-HighEBellSound.mp3"></audio>
+
+
+<div id="belldiv20" class="show hidden">
+  <button class="btn btn-open" type="button" id="bellshow20"></button>
+  <div class="Bellside text-center">
+      <div class="container container-bells20">
+        <div class="bells-wrap">
+          <div class="bells-row top-row">
+            <div id="a-sharp-low" class="bells-btn bells-btn-20" data-key="Digit2"></div>
+            <div class="item-row">
+              <div id="c-sharp" class="bells-btn bells-btn-20" data-key="Digit4"></div>
+              <div id="d-sharp" class="bells-btn bells-btn-20" data-key="Digit5"></div>
+            </div>
+            <div class="item-row">
+              <div id="f-sharp" class="bells-btn bells-btn-20" data-key="Digit7"></div>
+              <div id="g-sharp" class="bells-btn bells-btn-20" data-key="Digit8"></div>
+              <div id="a-sharp" class="bells-btn bells-btn-20" data-key="Digit9"></div>
+            </div>
+            <div class="item-row">
+              <div id="c-sharp-high" class="bells-btn bells-btn-20" data-key="Minus"></div>
+              <div id="d-sharp-high" class="bells-btn bells-btn-20" data-key="Equal"></div>
+            </div>
+          </div>
+          <div class="bells-row bottom-row">
+            <div id="a-low" class="bells-btn bells-btn-20" data-key="KeyQ"></div>
+            <div id="b-low" class="bells-btn bells-btn-20" data-key="KeyW"></div>
+            <div id="c" class="bells-btn bells-btn-20" data-key="KeyE"></div>
+            <div id="d" class="bells-btn bells-btn-20" data-key="KeyR"></div>
+            <div id="e" class="bells-btn bells-btn-20" data-key="KeyT"></div>
+            <div id="f" class="bells-btn bells-btn-20" data-key="KeyY"></div>
+            <div id="g" class="bells-btn bells-btn-20" data-key="KeyU"></div>
+            <div id="a" class="bells-btn bells-btn-20" data-key="KeyI"></div>
+            <div id="b" class="bells-btn bells-btn-20" data-key="KeyO"></div>
+            <div id="c-high" class="bells-btn bells-btn-20" data-key="KeyP"></div>
+            <div id="d-high" class="bells-btn bells-btn-20" data-key="BracketLeft"></div>
+            <div id="e-high" class="bells-btn bells-btn-20" data-key="BracketRight"></div>
+          </div>
+        </div>
+        <small>To use the bells, click them or use keys Q through P to play the bottom row and the numbers 2 through + to play the top row</small>
+      </div>
+    </div>
+</div>
+
+<!--- End Bell side 20 --->
+
+<!--{{ 'index_1.js' | javascript_link }}-->
+<script>
+  var parts_player;
+    var live_nodes =0;
+    console.log("about to create player");
+    <!--$(document).ready(function () {-->
+    <!--  parts_player = new PartsPlayer();-->
+    <!--  parts_player.load_parts_player_audio();-->
+    <!--})-->
+</script>
+
+{{ 'custom-bells20.css' | stylesheet_link }}
+{{ 'custom-bells20-scripts.js' | javascript_link }}
+{{ 'custom_scripts.js' | javascript_link }}
+
+</body>
+
+
+</html>

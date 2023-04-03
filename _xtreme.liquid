@@ -1,0 +1,43 @@
+<section class="xtreme">
+    <h2 class="xtreme--title">{{ settings.page_blocks.xtreme.title }}</h2>
+    <div class="xtreme--content">
+      <div>
+        <a href="{{ settings.page_blocks.xtreme.element_1_url | link }}" class="xtreme--block xtreme--block-1" style="background-image: url('{{ settings.page_blocks.xtreme.element_1_image | image_url, width: 192 }}');"></a>
+        <a href="{{ settings.page_blocks.xtreme.element_2_url | link }}" class="xtreme--block xtreme--block-2" style="background-image: url('{{ settings.page_blocks.xtreme.element_2_image | image_url, width: 192 }}');"></a>
+      </div>
+      <div>
+        <a href="{{ settings.page_blocks.xtreme.element_3_url | link }}" class="xtreme--block xtreme--block-3" style="background-image: url('{{ settings.page_blocks.xtreme.element_3_image | image_url, width: 236 }}');"></a>
+      </div>
+      <div>
+        <a href="{{ settings.page_blocks.xtreme.element_4_url | link }}" class="xtreme--block xtreme--block-4" style="background-image: url('{{ settings.page_blocks.xtreme.element_4_image | image_url, width: 192 }}');"></a>
+        <a href="{{ settings.page_blocks.xtreme.element_5_url | link }}" class="xtreme--block xtreme--block-5" style="background-image: url('{{ settings.page_blocks.xtreme.element_5_image | image_url, width: 192 }}');"></a>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+    only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+    only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+      .xtreme--block-1 {
+        background-image: url('{{ settings.page_blocks.xtreme.element_1_image | image_url, width: 384 }}') !important;
+      }
+      .xtreme--block-2 {
+        background-image: url('{{ settings.page_blocks.xtreme.element_2_image | image_url, width: 384 }}') !important;
+      }
+      .xtreme--block-3 {
+        background-image: url('{{ settings.page_blocks.xtreme.element_3_image | image_url, width: 472 }}') !important;
+      }
+      .xtreme--block-4 {
+        background-image: url('{{ settings.page_blocks.xtreme.element_4_image | image_url, width: 384 }}') !important;
+      }
+      .xtreme--block-5 {
+        background-image: url('{{ settings.page_blocks.xtreme.element_5_image | image_url, width: 384 }}') !important;
+      }
+    }
+  </style>
+  

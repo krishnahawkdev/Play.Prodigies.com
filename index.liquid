@@ -1,0 +1,16 @@
+{% include 'hero_banner' %}
+{% if settings.page_blocks.featured_category.active %}
+  {% include 'trending_programs' %}
+{% endif %}
+{% if settings.page_blocks.trending_categories.active %}
+  {% include 'trending_categories' %}
+{% endif %}
+{% if settings.page_blocks.xtreme.active %}
+  {% include 'xtreme' %}
+{% endif %}
+{% if settings.page_blocks.all_platforms.active %}
+  {% include 'all_platforms' %}
+{% endif %}
+{% if settings.page_blocks.lets_get_you_strated.active %}
+  {% include 'lets_get_you_started' %}
+{% endif %}

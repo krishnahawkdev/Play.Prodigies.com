@@ -1,0 +1,162 @@
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer--copyright">
+          {{ settings.footer.copyright }}
+        </div>
+        <div class="col-md-6 footer--links">
+          {% for link in navigation.groups.footer %}
+            {% if link.dropdown %}
+              <div class="dropdown d-md-inline-block" data-controller="dropdown">
+                <div class="dropdown--action"
+                     data-target="dropdown.selector"
+                     data-action="click->dropdown#toggle">
+                  <a class="dropdown--head-link">{{ link.title }} <i class="fas fa-caret-down"></i></a>
+                </div>
+                <div class="dropdown--body display-none-important" data-target="dropdown.content">
+                  {% for sub_link in link.links %}
+                    <a href="{{ sub_link.url | link }}">{{ sub_link.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              {% case link.url %}
+              {% when '/login' %}
+                {% if user.guest %}
+                  <a href="{{ link.url | link }}" class="footer--link py-2 d-md-inline-block">
+                    {{ link.title }}
+                  </a>
+                {% endif %}
+              {% when '/dashboard' %}
+                {% unless user.guest %}
+                  <a href="{{ link.url | link }}" class="footer--link py-2 d-md-inline-block">
+                    {{ link.title }}
+                  </a>
+                {% endunless %}
+              {% when '/sign_out' %}
+                {% unless user.guest %}
+                  <a href="{{ link.url | link }}" class="footer--link py-2 d-md-inline-block">
+                    {{ link.title }}
+                  </a>
+                {% endunless %}
+              {% else %}
+                <a href="{{ link.url | link }}" class="footer--link py-2 d-md-inline-block">
+                  {{ link.title }}
+                </a>
+              {% endcase %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="col-md-3">
+          <div class="footer--social">
+            {% if settings.footer.instagram.size != 0 %}
+              <a href="{{ settings.footer.instagram }}" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            {% endif %}
+            {% if settings.footer.facebook.size != 0 %}
+              <a href="{{ settings.footer.facebook }}" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            {% endif %}
+            {% if settings.footer.youtube.size != 0 %}
+              <a href="{{ settings.footer.youtube }}" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            {% endif %}
+            {% if settings.footer.twitter.size != 0 %}
+              <a href="{{ settings.footer.twitter }}" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+            {% endif %}
+          </div>
+          <div>
+            {{ footer_uscreen_grey }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% if user.guest %}
+    <script>
+        window.intercomSettings = {
+            app_id: "g8gme9fh"
+        };
+    </script>
+    <script>
+        (function() {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', intercomSettings);
+            } else {
+                var d = document;
+                var i = function() {
+                    i.c(arguments)
+                };
+                i.q = [];
+                i.c = function(args) {
+                    i.q.push(args)
+                };
+                w.Intercom = i;
+  
+                function l() {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://widget.intercom.io/widget/g8gme9fh';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                }
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })()
+    </script>
+    {% else %}
+    <script>
+        window.intercomSettings = {
+                app_id: "g8gme9fh",
+                name: '{{ user.name }}', // Full name    email: '{{ user.email }}' // Email address  };  
+    </script>
+    <script>
+        (function() {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', intercomSettings);
+            } else {
+                var d = document;
+                var i = function() {
+                    i.c(arguments)
+                };
+                i.q = [];
+                i.c = function(args) {
+                    i.q.push(args)
+                };
+                w.Intercom = i;
+  
+                function l() {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://widget.intercom.io/widget/g8gme9fh';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                }
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })()
+    </script>
+  {% endif %}
+  

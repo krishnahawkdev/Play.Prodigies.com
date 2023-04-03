@@ -1,0 +1,33 @@
+<!--<script>-->
+
+    <!--let getUserInfo = () => {-->
+    <!--  axios.get(`/api/sessions`).then(response => {-->
+    <!--    let data = response.data-->
+    <!--    if (data.logged) {-->
+    <!--      axios.get(`/api/users/me`).then(response => {-->
+    <!--        let data = response.data-->
+    <!--        if (!data.subscriber) {-->
+    <!--          location.replace('/join')-->
+    <!--        }-->
+    <!--      })-->
+    <!--    }-->
+    <!--  })-->
+    <!--}-->
+    
+    <!--getUserInfo()-->
+    
+    <!--</script>-->
+    
+    {% if user.subscriber? %}
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          
+          {{ page.content }}
+        
+        </div>
+      </div>
+    </div>
+    {% else %}
+      <script>location.replace('/join')</script>
+    {% endif %}

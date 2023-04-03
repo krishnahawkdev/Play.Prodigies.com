@@ -1,0 +1,40 @@
+<div class="hero_banner">
+    <div class="hero_banner--background-image" style="background-image: url('{{ settings.page_blocks.hero_banner.image | image_url, width: 600 }}');">
+    </div>
+    <div class="hero_banner--background-shadow" style="background: {{ settings.page_blocks.hero_banner.shadow_color | to_rgba, opacity: settings.page_blocks.hero_banner.fade }}"></div>
+    <div class="hero_banner--main">
+      {% include 'top_menu' %}
+      <div class="container hero_banner--cta">
+        <div>
+          <h1 class="hero_banner--title">
+            {{ settings.page_blocks.hero_banner.title }}
+          </h1>
+          <p class="hero_banner--subtitle">
+            {{ settings.page_blocks.hero_banner.subtitle }}
+          </p>
+          <div class="hero_banner--cta-wrapper">
+            <div class="hero_banner--cta-link">
+              <a href="{{ settings.page_blocks.hero_banner.cta_url | link }}" class="btn btn--primary btn--width">
+                {{ settings.page_blocks.hero_banner.cta_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+    only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+    only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+      .hero_banner--background-image {
+        background-image: url('{{ settings.page_blocks.hero_banner.image | image_url, width: 1200 }}') !important;
+      }
+    }
+  </style>
+  

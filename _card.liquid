@@ -1,0 +1,24 @@
+{% comment %} You can't use snippets in this snippet. {% endcomment %}
+<div class="col-sm-12 col-md-6 col-lg-4 card">
+  <a href="{{ program.url }}" class="main_poster">
+    <img src="{{ program.main_poster | image_url, width: 10 }}"
+         data-full="{{ program.main_poster | image_url, width: 333 }}"
+         srcset="{{ program.main_poster | image_url, width: 333 }},
+                 {{ program.main_poster | image_url, width: 666 }} 2x"
+         data-controller="progressive"
+         data-target="progressive.image"
+         alt="{{ program.title }}"
+         class="image preview"/>
+  </a>
+  <span class="title primary-hover-color">
+    <a href="{{ program.url }}">{{ program.title }}</a>
+    {% if settings.common.program_card_duration %}
+      <div class="duration">{{ program.duration }}</div>
+    {% endif %}
+    {% if program.author.size != 0 %}
+      {% if settings.common.program_card_author %}
+        <a class="author" href="{{ program.author.url }}">by {{ program.author.name }}</a>
+      {% endif %}
+    {% endif %}
+  </span>
+</div>

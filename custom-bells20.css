@@ -1,0 +1,318 @@
+.Bellside .container-bells20 {
+  max-width: 750px !important;
+}
+
+.bells-wrap small {
+  display: block;
+  text-align: center;
+  margin: 10px auto 0;
+}
+
+.bells-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-row {
+  justify-content: space-around;
+}
+
+.item-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.bells-btn {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bells-btn:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Top Row */
+
+#a-sharp-low::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Dma61MnTXitM8U4rTcEm_1-ASharp-RestLow.png");
+}
+
+#a-sharp-low:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/WtzMM0ikThKqQH3lAkLK_1-ASharp-HOVERLow.png");
+}
+
+#a-sharp-low.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/HLrdmAvRQMSY9WLAjnsU_1-ASharp-ActiveLow.png") !important;
+}
+
+#c-sharp::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/lZvnebnRla2J249zPF0e_2-CSharp-Rest.png");
+}
+
+#c-sharp:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/KS93cXPRceN6sUumq9Fg_2-CSharp-HOVER.png");
+}
+
+#c-sharp.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Di0l6o3Sgu6AzjIXP9Mi_2-CSharp-Active.png") !important;
+}
+
+#d-sharp::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/h676hQlaRYmZaJ7htSBx_3-DSharp-Rest.png");
+}
+
+#d-sharp:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/j6sR2gEJS0Gdtbl9fOfk_3-DSharp-HOVER.png");
+}
+
+#d-sharp.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/cQpmXoe5SjWPjqewgVqQ_3-DSharp-Active.png") !important;
+}
+
+#f-sharp::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/3jyV5PXqRuq2JB38YzJp_4-FSharp-Rest.png");
+}
+
+#f-sharp:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/GFx2K3vLTcqNOA87Iavo_4-FSharp-HOVER.png");
+}
+
+#f-sharp.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Axlg1TnvQNiT9GtXytow_4-FSharp-Active.png") !important;
+}
+
+#g-sharp::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/6F4ygMlQNGwfrbLDEAmG_5-GSharp-Rest.png");
+}
+
+#g-sharp:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/tyOlKC2ZSbO1tuM6UKEt_5-GSharp-HOVER.png");
+}
+
+#g-sharp.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/u0eZefTQa6DXF8FGDwgQ_5-GSharp-Active.png") !important;
+}
+
+#a-sharp::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/arYAGCIYSciL3F5KffMf_6-ASharp-Rest.png");
+}
+
+#a-sharp:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/rwzYq1MeSMmvjsyc31cl_6-ASharp-HOVER.png");
+}
+
+#a-sharp.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/42NIA9EjQ160m1LRi5Da_6-ASharp-Active_1.png") !important;
+}
+
+#c-sharp-high::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/5nL6JqoHRQaPL7upbd3s_7-high-cSharp-rest.png");
+}
+
+#c-sharp-high:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/0IL7GniQEaP5Z5oWwUfw_7-high-cSharpHOVER.png");
+}
+
+#c-sharp-high.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/n6kcD5KkSJGeNHjTPNot_7-high-cSharp-active.png") !important;
+}
+
+#d-sharp-high::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/kmSFZ03GTHeChlATbBU6_8-high-dSharp-rest.png");
+}
+
+#d-sharp-high:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/oeg3vF2Q61BNptYAta8g_8-high-dSharp-HOVER.png");
+}
+
+#d-sharp-high.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/4Oe5ao0QaCLK1K3Ib3gw_8-high-dSharp-active.png") !important;
+}
+
+/* Bottom Row */
+
+#a-low::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/UFOnLa5JSIK8j3Iqwv0M_1-A-RestLow.png");
+}
+
+#a-low:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/qrUNc6DfTqJEbnT2UU1H_1-A-HOVERLow.png");
+}
+
+#a-low.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/0pXXM0DGQMOHa2bgQEnf_1-A-ActiveLow.png") !important;
+}
+
+#b-low::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/KfQ4nIzNTd2pXNhM3k0x_2-B-RestLow.png");
+}
+
+#b-low:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/1UKHlrk4Qwqwyzq1fefU_2-B-HOVERLow.png");
+}
+
+#b-low.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/u79c5PGOTSKmKlTUqKgR_2-B-ActiveLow.png") !important;
+}
+
+#c::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/X1XezL8BSvWAmCm817xw_3-C-Rest.png");
+}
+
+#c:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/qJJkzM8ToOlkUepWJSGq_3-C-HOVER.png");
+}
+
+#c.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/0msjdC4QSi1QyaXT7Qm7_3-C-Active.png") !important;
+}
+
+#d::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/qFGPkVmhQFqx1k3exaUD_4-D-Rest.png");
+}
+
+#d:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Cq1Qr0CJQnSLtXpW3TG8_4-D-HOVER.png");
+}
+
+#d.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Waam3l1VSM6OoVEEakf0_4-D-Active.png") !important;
+}
+
+#e::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/ollm8dsdS4WDwlalHARw_5-E-Rest.png");
+}
+
+#e:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/k8YQgOZWSqyT0ToHE6fz_5-E-HOVER.png");
+}
+
+#e.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/w3yDTiRuQu6VfSlXasmV_5-E-Active.png") !important;
+}
+
+#f::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/ieEkCvYSQKOOMhRywPim_6-F-Rest.png");
+}
+
+#f:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/hJMvkza1Q7eevFD8IrKV_6-F-HOVER.png");
+}
+
+#f.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/8yiQW6olQKGyEl5jVr3L_6-F-Active.png") !important;
+}
+
+#g::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/cU9MuMuyR5W4rVQXMd1r_7-G-Rest.png");
+}
+
+#g:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/6pvSpFxHTAyRBlrPYfIs_7-G-HOVER.png");
+}
+
+#g.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/pJXkGXgFRmKDR8sKZkEP_7-G-Active.png") !important;
+}
+
+#a::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/2buz3nxRRnqIWQXveuUk_8-A-Rest.png");
+}
+
+#a:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/V5ZAmt6rSaC0Qewv0Dwu_8-A-HOVER.png");
+}
+
+#a.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/HxPHpVeRzOZIuL0ZNbcR_8-A-Active.png") !important;
+}
+
+#b::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/aET6uS2R26Gx1QM9KR1C_9-B-Rest.png");
+}
+
+#b:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/iGjVJz8ITiuaE2lFW2JP_9-B-HOVER.png");
+}
+
+#b.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/Ku1aB4EAS4mZBG8ibW9B_9-B-Active.png") !important;
+}
+
+#c-high::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/jsfcy8ADSe2ZhZerrbfF_10-high-c-rest.png");
+}
+
+#c-high:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/hWlU5RYeQiebjjF2gJ4I_10-high-c-HOVER.png");
+}
+
+#c-high.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/er67mpXtTP2MazcUSABy_10-high-c-active.png") !important;
+}
+
+#d-high::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/z67wNkqSSSMePlzUEFQ9_11-high-d-rest.png");
+}
+
+#d-high:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/lVIjxuoNQcy3BHmG8fkC_11-high-d-HOVER.png");
+}
+
+#d-high.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/vIRMXUsWTBemMk5gAep4_11-high-d-active.png") !important;
+}
+
+#e-high::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/z2s8AzkQSeOWOPgIwWj5_12-high-e-rest.png");
+}
+
+#e-high:hover:before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/GKD17pQ9S9is9tPBL1nN_12-high-e-HOVER.png");
+}
+
+#e-high.active::before {
+  background-image: url("https://s3.amazonaws.com/unode1/assets/11794/gSBF7nyKSWaikvmTgE4e_12-high-e-active.png") !important;
+}
+
+@media screen and (max-width: 850px) {
+  #belldiv20.show .btn-open {
+    bottom: 230px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .top-row {
+    justify-content: center;
+  }
+  .bells-btn {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #belldiv20.show .btn-open {
+    bottom: 310px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #belldiv20.show .btn-open {
+    bottom: 380px;
+  }
+}

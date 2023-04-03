@@ -1,0 +1,75 @@
+
+.mobile-customer-infor-footer {
+    display: none;
+  }
+  .customer-info-footer--title {
+    background: #3d958b;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+  }
+  .customer-info-footer--title + img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .customer-info-footer--title:before,
+  .customer-info-footer--title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('https://s3.amazonaws.com/unode1/assets/11794/nXiCr67oRhXxNcpVxVmO_quotes.svg') center no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .customer-info-footer--title:before {
+    top: -10px;
+    left: -10px;
+  }
+  
+  .customer-info-footer--title:after {
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(180deg);
+  }
+  
+  @media screen and (max-width: 991px) {
+    .customer-info-footer {
+      display: none;
+    }
+    .mobile-customer-infor-footer {
+      display: block;
+      max-width: 150px;
+      margin-top: -25px;
+    }
+    .card .description.touched {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  
+  
+  .dropdown--body a:hover {
+    background-color: #007f7c !important;
+  }
+  
+  .custom-header-wrap {
+    margin: 0 auto;
+    display:flex !important;
+    align-items:center !important;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-header-wrap {
+     margin: 0 0 0 auto;
+    }
+  }
+  
+  

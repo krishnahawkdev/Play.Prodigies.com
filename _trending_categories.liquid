@@ -1,0 +1,53 @@
+<section class="trending-categories trending_categories">
+    <h2 class="trending-categories--title">{{ settings.page_blocks.trending_categories.title }}</h2>
+    <div class="trending-categories--inner">
+      <div class="trending-categories--blocks">
+        {% assign category_1 = settings.page_blocks.trending_categories.element_1_url | get_category %}
+        <a href="{{category_1.url}}" class="trending-categories--block" style="background-image: url('{{ settings.page_blocks.trending_categories.element_1_image | image_url, width: 240 }}');">
+          <span class="trending-categories--block-title">{{ settings.page_blocks.trending_categories.element_1_title }}</span>
+        </a>
+  
+        {% assign category_2 = settings.page_blocks.trending_categories.element_2_url | get_category %}
+        <a href="{{category_2.url}}" class="trending-categories--block" style="background-image: url('{{ settings.page_blocks.trending_categories.element_2_image | image_url, width: 240 }}');">
+          <span class="trending-categories--block-title">{{ settings.page_blocks.trending_categories.element_2_title }}</span>
+        </a>
+  
+        {% assign category_3 = settings.page_blocks.trending_categories.element_3_url | get_category %}
+        <a href="{{category_3.url}}" class="trending-categories--block" style="background-image: url('{{ settings.page_blocks.trending_categories.element_3_image | image_url, width: 240 }}');">
+          <span class="trending-categories--block-title">{{ settings.page_blocks.trending_categories.element_3_title }}</span>
+        </a>
+  
+        {% assign category_4 = settings.page_blocks.trending_categories.element_4_url | get_category %}
+        <a href="{{category_4.url}}" class="trending-categories--block" style="background-image: url('{{ settings.page_blocks.trending_categories.element_4_image | image_url, width: 240 }}');">
+          <span class="trending-categories--block-title">{{ settings.page_blocks.trending_categories.element_4_title }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+    only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+    only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+    only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+      .trending-categories--blocks > a:nth-of-type(1) {
+        background-image: url('{{ settings.page_blocks.trending_categories.element_1_image | image_url, width: 480 }}') !important;
+      }
+  
+      .trending-categories--blocks > a:nth-of-type(2) {
+        background-image: url('{{ settings.page_blocks.trending_categories.element_2_image | image_url, width: 480 }}') !important;
+      }
+  
+      .trending-categories--blocks > a:nth-of-type(3) {
+        background-image: url('{{ settings.page_blocks.trending_categories.element_3_image | image_url, width: 480 }}') !important;
+      }
+  
+      .trending-categories--blocks > a:nth-of-type(4) {
+        background-image: url('{{ settings.page_blocks.trending_categories.element_4_image | image_url, width: 480 }}') !important;
+      }
+    }
+  </style>
+  

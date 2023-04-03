@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
+{% if settings.page_blocks.featured_category.id %}
+  {% assign category = settings.page_blocks.featured_category.id | get_category %}
+  <div class="featured-category featured_category">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="featured-category--title">{{ settings.page_blocks.featured_category.title }}</h2>
+        </div>
+      </div>
+      <div class="justify-content-center">
+        <div class="row">
+          {% for program in category.programs_preview | limit: settings.page_blocks.featured_category.limit %}
+            {% include 'card' %}
+          {% endfor %}
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="featured-category--button">
+              <a href="{{ settings.page_blocks.featured_category.cta_url | link }}" class="btn btn--outline btn--width">
+                {{ settings.page_blocks.featured_category.cta_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div class="featured-category featured_category">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="featured-category--title">{{ settings.page_blocks.featured_category.title }}</h2>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/OCacAGJqTGSS4Gcv9E4N_program-1.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/OCacAGJqTGSS4Gcv9E4N_program-1.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/OCacAGJqTGSS4Gcv9E4N_program-1.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/OCacAGJqTGSS4Gcv9E4N_program-1.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="The Athlete Machine" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              The Athlete Machine
+              <div class="author">Nikki Sanders</div>
+              <div class="duration">10:41</div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/xKUyQYaRQkaSYhEg2PZQ_program-2.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/xKUyQYaRQkaSYhEg2PZQ_program-2.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/xKUyQYaRQkaSYhEg2PZQ_program-2.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/xKUyQYaRQkaSYhEg2PZQ_program-2.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="Felix Baumgartner Space Jump…" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              Felix Baumgartner Space Jump…
+              <div class="author">Nikki Sanders</div>
+              <div class="duration">10:50</div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/CXKvmslTvWpmoRExWlBQ_program-3.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/CXKvmslTvWpmoRExWlBQ_program-3.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/CXKvmslTvWpmoRExWlBQ_program-3.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/CXKvmslTvWpmoRExWlBQ_program-3.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="Megawatt Enduro Race 2018" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              Megawatt Enduro Race 2018
+              <div class="author">Sophie Kelly</div>
+              <div class="duration">24:11</div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/QRbfTj9LQ2K6CoUhJgz2_program-4.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/QRbfTj9LQ2K6CoUhJgz2_program-4.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/QRbfTj9LQ2K6CoUhJgz2_program-4.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/QRbfTj9LQ2K6CoUhJgz2_program-4.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="As the Crow Flies" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              As the Crow Flies
+              <div class="author">Alvin Castro</div>
+              <div class="duration">32:13</div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/WKVuO8yFQCO4ZsqkSvSX_program-5.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/WKVuO8yFQCO4ZsqkSvSX_program-5.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/WKVuO8yFQCO4ZsqkSvSX_program-5.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/WKVuO8yFQCO4ZsqkSvSX_program-5.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="Red Bull Drift Shifters LIVE" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              Red Bull Drift Shifters LIVE
+              <div class="author">Roxie Wilkins</div>
+              <div class="duration">10:23</div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <a href="#" class="main_poster">
+              <img
+                src="{{ 'https://s3.amazonaws.com/unode1/assets/4832/Aal5SkUbRKqTeYw8wdrt_program-6.jpg' | image_url, width: 10 }}"
+                data-full="{{ 'https://s3.amazonaws.com/unode1/assets/4832/Aal5SkUbRKqTeYw8wdrt_program-6.jpg' | image_url, width: 333 }}"
+                srcset="{{ 'https://s3.amazonaws.com/unode1/assets/4832/Aal5SkUbRKqTeYw8wdrt_program-6.jpg' | image_url, width: 333 }},
+                        {{ 'https://s3.amazonaws.com/unode1/assets/4832/Aal5SkUbRKqTeYw8wdrt_program-6.jpg' | image_url, width: 666 }} 2x"
+                data-controller="progressive"
+                data-target="progressive.image"
+                class="image preview"
+                alt="Highest Battle" />
+            </a>
+            <a href="#" class="title primary-hover-color">
+              Highest Battle
+              <div class="author">Leo Carroll</div>
+              <div class="duration">1:01</div>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="featured-category--button">
+              <a href="{{ settings.page_blocks.featured_category.cta_url | link }}" class="btn btn--outline btn--width">
+                {{ settings.page_blocks.featured_category.cta_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endif %}

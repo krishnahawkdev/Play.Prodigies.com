@@ -1,0 +1,1 @@
+var PartsPlayer=function(){this.crossfade_audio=null;};PartsPlayer.prototype.load_parts_player_audio=function(){this.crossfade_audio=new CrossfadeAudio();this.crossfade_audio.initialize();};PartsPlayer.prototype.play_button=function(){this.crossfade_audio.play();};

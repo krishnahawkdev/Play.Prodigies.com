@@ -1,0 +1,794 @@
+{
+  "pages": [
+    {
+      "type": "index",
+      "title": "Main page",
+      "blocks": [
+        {
+          "id": "hero_banner",
+          "title": "Main Banner",
+          "description": "Settings for Main Banner",
+          "fields": [
+            {
+              "id": "fade",
+              "title": "shadows Fade",
+              "type": "range",
+              "min": 0,
+              "max": 0.9,
+              "value": "0.6",
+              "step": 0.1,
+              "hint": "Shadows image fade effect."
+            },
+            {
+              "id": "shadow_color",
+              "title": "Shadow Background Color",
+              "type": "color",
+              "value": "#1b233e"
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Teach Your Kids Music"
+            },
+            {
+              "id": "subtitle",
+              "title": "Subtitle",
+              "type": "text",
+              "value": "Sing, Hand-Sign & Play with Over 700 Video Music Lessons for Kids Ages 2-12. Covers General Music, Bells, Piano, Ukulele, Recorder, Solfege, Percussion & More!"
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA text",
+              "type": "string",
+              "value": "Enroll Now for $14.99/mo"
+            },
+            {
+              "id": "cta_url",
+              "title": "CTA link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "image",
+              "title": "Background Image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/6853b744-8480-4f46-9869-0f40c68abc74.jpg",
+              "hint": "Recommended size: 2400x1304px"
+            }
+          ]
+        },
+        {
+          "id": "featured_category",
+          "title": "Most Watched",
+          "description": "Modify the settings of your Most Watched",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Lessons for the Young Musician"
+            },
+            {
+              "id": "id",
+              "title": "Category",
+              "type": "category_select",
+              "value": "39521"
+            },
+            {
+              "id": "limit",
+              "title": "Programs Limit",
+              "type": "integer",
+              "value": 6,
+              "hint": "You can show up to 6 programs on the home page. You can modify program position inside a specific category."
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA text",
+              "type": "string",
+              "value": "BROWSE LIBRARY",
+              "hint": ""
+            },
+            {
+              "id": "cta_url",
+              "title": "CTA link",
+              "type": "link",
+              "value": "0-catalog",
+              "hint": "By default setup to catalog page."
+            }
+          ]
+        },
+        {
+          "id": "trending_categories",
+          "title": "Browse",
+          "description": "Modify the settings of your Categories list",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Browse"
+            },
+            {
+              "id": "element_1_image",
+              "title": "Block 1: Image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/e0fe7bb2-17e4-492e-b5b9-d4249bc796d3.png",
+              "hint": "Recommended size: 600x496px"
+            },
+            {
+              "id": "element_1_title",
+              "title": "Block 1: Title",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "element_1_url",
+              "title": "Block 1: Category",
+              "type": "category_select",
+              "value": "49970"
+            },
+            {
+              "id": "element_2_image",
+              "title": "Block 2: Image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/f901b49d-345c-41ae-8b63-71c1d262005b.png",
+              "hint": "Recommended size: 600x496px"
+            },
+            {
+              "id": "element_2_title",
+              "title": "Block 2: Title",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "element_2_url",
+              "title": "Block 2: Category",
+              "type": "category_select",
+              "value": "39882"
+            },
+            {
+              "id": "element_3_image",
+              "title": "Block 3: Image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/2a4cce48-d60a-46bc-a987-7083ac310a87.png",
+              "hint": "Recommended size: 600x496px"
+            },
+            {
+              "id": "element_3_title",
+              "title": "Block 3: Title",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "element_3_url",
+              "title": "Block 3: Category",
+              "type": "category_select",
+              "value": "44016"
+            },
+            {
+              "id": "element_4_image",
+              "title": "Block 4: Image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/65a5a148-ab9a-4e92-8dbf-e965b469eba6.png",
+              "hint": "Recommended size: 600x496px"
+            },
+            {
+              "id": "element_4_title",
+              "title": "Block 4: Title",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "element_4_url",
+              "title": "Block 4: Category",
+              "type": "category_select",
+              "value": "49970"
+            }
+          ]
+        },
+        {
+          "id": "xtreme",
+          "title": "Xtreme",
+          "description": "Modify the settings of your xtreme section",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "#HappyMusicing"
+            },
+            {
+              "id": "element_1_image",
+              "title": "Block 1: Image",
+              "type": "image",
+              "value": "",
+              "hint": "Recommended size: 576x358px"
+            },
+            {
+              "id": "element_1_url",
+              "title": "Block 1: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "element_2_image",
+              "title": "Block 2: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4832/sbzB2svQMmxGtOxtG5N0_xtreme-2.jpg",
+              "hint": "Recommended size: 576x358px"
+            },
+            {
+              "id": "element_2_url",
+              "title": "Block 2: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "element_3_image",
+              "title": "Block 3: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4832/rnXUAhITTlu39VXeFDhs_xtreme-3.jpg",
+              "hint": "Recommended size: 708x716px"
+            },
+            {
+              "id": "element_3_url",
+              "title": "Block 3: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "element_4_image",
+              "title": "Block 4: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4832/xqQwPp30SKy0H2WiZ1kL_xtreme-4.jpg",
+              "hint": "Recommended size: 576x358px"
+            },
+            {
+              "id": "element_4_url",
+              "title": "Block 4: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "element_5_image",
+              "title": "Block 5: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4832/K8eD88HLTYKngyT895Sd_xtreme-5.jpg",
+              "hint": "Recommended size: 576x358px"
+            },
+            {
+              "id": "element_5_url",
+              "title": "Block 5: Category",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            }
+          ]
+        },
+        {
+          "id": "all_platforms",
+          "title": "All Platforms",
+          "description": "Modify the settings of your All Platforms",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Sing, Sign & Play Across All Platforms"
+            },
+            {
+              "id": "subtitle",
+              "title": "Subtitle",
+              "type": "text",
+              "value": "Prodigies Music is accessible on over 1000 devices including iOS devices, Android devices, MACs, PCs, streaming media boxes such as Roku, Apple TV, Chromecast, and Nexus Player."
+            },
+            {
+              "id": "image",
+              "title": "Devices screen image",
+              "type": "image",
+              "value": "https://unode1.s3.amazonaws.com/11794/uploads/e3e0ccc3-5961-4a6e-8e7c-82d47ebf8547.png",
+              "hint": "Recommended size: 1600x1200px"
+            },
+            {
+              "id": "amazon",
+              "title": "Show/Hide Amazon",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "amazon_link",
+              "title": "Amazon link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "apple_tv",
+              "title": "Show/Hide Apple TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "apple_tv_link",
+              "title": "Apple TV link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "roku_tv",
+              "title": "Show/Hide Roku TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "roku_tv_link",
+              "title": "Roku TV link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "iphone",
+              "title": "Show/Hide Iphone",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "iphone_link",
+              "title": "iPhone link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "android",
+              "title": "Show/Hide Android",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "android_link",
+              "title": "Android link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "android_tv",
+              "title": "Show/Hide Android TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "android_tv_link",
+              "title": "Android TV link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            },
+            {
+              "id": "fire_tv",
+              "title": "Show/Hide Fire TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "fire_tv_link",
+              "title": "Fire TV link",
+              "type": "link",
+              "value": "/#all_platforms",
+              "hint": ""
+            }
+          ]
+        },
+        {
+          "id": "lets_get_you_strated",
+          "title": "Let’s get you started now!",
+          "description": "Settings for your CTA section",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Start Your Child's Musical Journey Today!"
+            },
+            {
+              "id": "subtitle",
+              "title": "Subtitle",
+              "type": "text",
+              "value": "Try Prodigies Music Lessons. Pause or Cancel Anytime. No Commitments or Contracts."
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA text",
+              "type": "string",
+              "value": "ENROLL TODAY"
+            },
+            {
+              "id": "cta_url",
+              "title": "CTA link",
+              "type": "link",
+              "value": "2-30010",
+              "hint": "By default setup to join subscription page."
+            }
+          ]
+        },
+        {
+          "id": "seo",
+          "title": "SEO Settings",
+          "description": "Search Engine Optimization Settings.",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Page Title",
+              "type": "string",
+              "value": "Prodigies Music Lessons - Sing, Sign, Play",
+              "hint": "The title tag of a web page is meant to be an accurate and concise description of a page's content."
+            },
+            {
+              "id": "description",
+              "title": "Page Description",
+              "type": "text",
+              "value": "Stream hundreds of educational & colorful music lessons from Mr. Rob & Prodigies Music.\n\nIncludes lessons for solfege, deskbells, Boomwhackers, piano, recorder, ukulele and more.",
+              "hint": "The meta description is an HTML attribute that provides a brief summary of a web page. Search engines such as Google often display the meta description."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "catalog",
+      "title": "Catalog page",
+      "blocks": [
+        {
+          "id": "browse",
+          "title": "Browsing Settings",
+          "description": "Setup texts and filtering options.",
+          "fields": [
+            {
+              "id": "all_tab",
+              "title": "All Programs Tab Title",
+              "type": "string",
+              "value": "All programs"
+            },
+            {
+              "id": "library_tab",
+              "title": "Library Tab Title",
+              "type": "string",
+              "value": "My Library"
+            },
+            {
+              "id": "library_tab_show",
+              "title": "Library Tab Show",
+              "type": "boolean",
+              "value": true,
+              "hint": "You don't need 'My library' if you want to sell subscriptions only. (Will show when logged in only)."
+            },
+            {
+              "id": "favorites_tab",
+              "title": "Favorites Tab Title",
+              "type": "string",
+              "value": "Favorites"
+            },
+            {
+              "id": "search_placeholder",
+              "title": "Search Placeholder",
+              "type": "string",
+              "value": "Search programs"
+            },
+            {
+              "id": "filter_by_category",
+              "title": "Allow Filter by Category",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "filter_by_category_placeholder",
+              "title": "Category Filter Placeholder",
+              "type": "string",
+              "value": "Filter by category"
+            },
+            {
+              "id": "filter_by_author",
+              "title": "Allow Filter by Author",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "filter_by_author_placeholder",
+              "title": "Author Filter Placeholder",
+              "type": "string",
+              "value": "Filter by author"
+            },
+            {
+              "id": "load_more",
+              "title": "Pagination loading button",
+              "type": "string",
+              "value": "Load More..."
+            },
+            {
+              "id": "not_found",
+              "title": "Not Found Error",
+              "type": "string",
+              "value": "Sorry! Nothing was found."
+            },
+            {
+              "id": "newest",
+              "title": "Newest filter",
+              "type": "string",
+              "value": "Newest"
+            },
+            {
+              "id": "latest",
+              "title": "Latest filter",
+              "type": "string",
+              "value": "Oldest"
+            }
+          ]
+        },
+        {
+          "id": "seo",
+          "title": "SEO Settings",
+          "description": "Search Engine Optimization Settings.",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Page Title",
+              "type": "string",
+              "value": "The title tag of a web page is meant to be an accurate and concise description of a page's content."
+            },
+            {
+              "id": "description",
+              "title": "Page Description",
+              "type": "text",
+              "value": "The meta description is an HTML attribute that provides a brief summary of a web page. Search engines such as Google often display the meta description."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "program",
+      "title": "Content page",
+      "blocks": [
+        {
+          "id": "player_texts",
+          "title": "Player",
+          "description": "Settings for your player",
+          "fields": [
+            {
+              "id": "player_color",
+              "title": "Player Control Colors",
+              "type": "color",
+              "value": "#ff3d94",
+              "hint": "Primary color used on player elements."
+            },
+            {
+              "id": "cta_title",
+              "title": "CTA Title",
+              "type": "string",
+              "value": "Purchase to Continue"
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA Text",
+              "type": "string",
+              "value": "Get access to this class and train your new skills."
+            },
+            {
+              "id": "cta_button",
+              "title": "CTA Button Text",
+              "type": "string",
+              "value": "Get Access Now"
+            }
+          ]
+        },
+        {
+          "id": "description",
+          "title": "Description area",
+          "description": "Settings for program description area",
+          "fields": [
+            {
+              "id": "about_title",
+              "title": "About program Title",
+              "type": "string",
+              "value": "About Program"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "author",
+      "title": "Author page",
+      "blocks": [
+        {
+          "id": "author_info",
+          "title": "Author Information",
+          "description": "Settings for your author page",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Page Title",
+              "type": "string",
+              "value": "My Classes"
+            },
+            {
+              "id": "button_text",
+              "title": "Button Text",
+              "type": "string",
+              "value": "Browse All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "title": "Category page",
+      "blocks": [
+        {
+          "id": "category_button",
+          "title": "Category button",
+          "description": "Settings for your category button",
+          "fields": [
+            {
+              "id": "button_text",
+              "title": "Button Text",
+              "type": "string",
+              "value": "Browse All"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "common_blocks": [
+    {
+      "id": "header",
+      "title": "Header",
+      "description": "Settings for Header block",
+      "fields": [
+        {
+          "id": "logo",
+          "title": "Logo",
+          "type": "image",
+          "value": "https://s3.us-east-1.amazonaws.com/unode1/assets%2Fpage-editor%2FProdigies-White-Logo.1671297433.png",
+          "hint": ""
+        },
+        {
+          "id": "logo_size",
+          "title": "Logo Size",
+          "type": "range",
+          "min": 10,
+          "max": 100,
+          "value": 40,
+          "hint": "Add logo size"
+        },
+        {
+          "id": "background_color",
+          "title": "Header Background Color",
+          "type": "color",
+          "value": "#009999ff",
+          "hint": "Note: background color works with every page except Home page."
+        },
+        {
+          "id": "links_color",
+          "title": "Header Links Color",
+          "type": "color",
+          "value": "#ffffffff",
+          "hint": "Note: Header Links color works with every page except Home page."
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "title": "Footer",
+      "description": "Settings for Footer block",
+      "fields": [
+        {
+          "id": "copyright",
+          "title": "Copyright",
+          "type": "string",
+          "value": "© Young Music LLC, 2022"
+        },
+        {
+          "id": "facebook",
+          "title": "Facebook Link",
+          "type": "string",
+          "value": "https://facebook.com/prodigiesmusiclessons"
+        },
+        {
+          "id": "twitter",
+          "title": "Twitter Link",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "instagram",
+          "title": "Instagram Link",
+          "type": "string",
+          "value": "https://www.instagram.com/prodigiesmusiclessons/"
+        },
+        {
+          "id": "youtube",
+          "title": "Youtube Link",
+          "type": "string",
+          "value": "https://www.youtube.com/channel/UCR_6C8MGPmasS-4QMKclRGw"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "description": "Global Settings",
+      "fields": [
+        {
+          "id": "background_color",
+          "title": "Background Color",
+          "type": "color",
+          "value": "#f4f4f4ff",
+          "hint": "Background color used over the whole theme."
+        },
+        {
+          "id": "primary_color",
+          "title": "Primary Color",
+          "type": "color",
+          "value": "#D52826",
+          "hint": "Primary color used over the whole theme."
+        },
+        {
+          "id": "program_card_author",
+          "title": "Show Author Name",
+          "type": "boolean",
+          "value": false,
+          "hint": "Show author name on program card."
+        },
+        {
+          "id": "program_card_duration",
+          "title": "Show Program Duration",
+          "type": "boolean",
+          "value": true,
+          "hint": "Show program duration on program card."
+        }
+      ]
+    }
+  ]
+}
