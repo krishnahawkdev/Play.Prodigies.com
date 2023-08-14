@@ -160,205 +160,1200 @@ visibility: hidden;
 {{ 'globle.js' | javascript_link }}
 {{ 'theme.css' | stylesheet_link }}
 
-<script>
-    var imageSrcs = [
-      "https://s3.amazonaws.com/unode1/assets/11794/I61GWyd5R72mnC7eG1Ja_A-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/ZSYmML4LSeKYJebFzHE4_B-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/GZdq6yFQqyRfUtMdnABw_C-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/CY8Fyva6Rc2tRVGH4eaF_D-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/IIyzF2RISvimuSvGX3N9_E-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/pzK8D799RxiF3BAOyuo3_F-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/e7mLxaPKRrucdyoE1MO6_G-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/CHdRq4yRMGzng5qm8Hmy_high-c-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/qi366ZxQMCo8QNRmFkyO_A-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/JXuZSUioSlaReTMrSKqR_B-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/ANX4NQhDSxypfB7tQ2Ba_C-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/leAANAPJST6jfZnuogsm_D-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/jZbZYrBeQYC2iXmD5BLq_E-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/MouqDgUGSe4CEZRsjfko_F-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/HopY3cbTRCHTUzSZmkkw_G-Active.png ",
-      "https://s3.amazonaws.com/unode1/assets/11794/VrZBF1LYQm6QrQXbs7Eo_high-c-active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/WtzMM0ikThKqQH3lAkLK_1-ASharp-HOVERLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/HLrdmAvRQMSY9WLAjnsU_1-ASharp-ActiveLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/KS93cXPRceN6sUumq9Fg_2-CSharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/Di0l6o3Sgu6AzjIXP9Mi_2-CSharp-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/j6sR2gEJS0Gdtbl9fOfk_3-DSharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/cQpmXoe5SjWPjqewgVqQ_3-DSharp-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/GFx2K3vLTcqNOA87Iavo_4-FSharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/Axlg1TnvQNiT9GtXytow_4-FSharp-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/tyOlKC2ZSbO1tuM6UKEt_5-GSharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/u0eZefTQa6DXF8FGDwgQ_5-GSharp-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/rwzYq1MeSMmvjsyc31cl_6-ASharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/42NIA9EjQ160m1LRi5Da_6-ASharp-Active_1.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/0IL7GniQEaP5Z5oWwUfw_7-high-cSharpHOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/n6kcD5KkSJGeNHjTPNot_7-high-cSharp-active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/oeg3vF2Q61BNptYAta8g_8-high-dSharp-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/4Oe5ao0QaCLK1K3Ib3gw_8-high-dSharp-active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/qrUNc6DfTqJEbnT2UU1H_1-A-HOVERLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/0pXXM0DGQMOHa2bgQEnf_1-A-ActiveLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/1UKHlrk4Qwqwyzq1fefU_2-B-HOVERLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/u79c5PGOTSKmKlTUqKgR_2-B-ActiveLow.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/qJJkzM8ToOlkUepWJSGq_3-C-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/0msjdC4QSi1QyaXT7Qm7_3-C-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/Cq1Qr0CJQnSLtXpW3TG8_4-D-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/Waam3l1VSM6OoVEEakf0_4-D-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/k8YQgOZWSqyT0ToHE6fz_5-E-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/w3yDTiRuQu6VfSlXasmV_5-E-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/hJMvkza1Q7eevFD8IrKV_6-F-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/8yiQW6olQKGyEl5jVr3L_6-F-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/6pvSpFxHTAyRBlrPYfIs_7-G-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/pJXkGXgFRmKDR8sKZkEP_7-G-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/V5ZAmt6rSaC0Qewv0Dwu_8-A-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/HxPHpVeRzOZIuL0ZNbcR_8-A-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/iGjVJz8ITiuaE2lFW2JP_9-B-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/Ku1aB4EAS4mZBG8ibW9B_9-B-Active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/hWlU5RYeQiebjjF2gJ4I_10-high-c-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/er67mpXtTP2MazcUSABy_10-high-c-active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/lVIjxuoNQcy3BHmG8fkC_11-high-d-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/vIRMXUsWTBemMk5gAep4_11-high-d-active.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/GKD17pQ9S9is9tPBL1nN_12-high-e-HOVER.png",
-      "https://s3.amazonaws.com/unode1/assets/11794/gSBF7nyKSWaikvmTgE4e_12-high-e-active.png"
-    ];
-    preloadImages(imageSrcs);
-    function preloadImages(srcs) {
-      if (!preloadImages.cache) {
-        preloadImages.cache = [];
-      }
-      var img;
-      for (var i = 0; i < srcs.length; i++) {
-        img = new Image();
-        img.src = srcs[i];
-        //console.log(img.src);
-        preloadImages.cache.push(img);
-      }
+
+<!-- START BELLS -->
+<!-- start bells CSS -->
+
+<style>
+	body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    min-height:2000px;
+    color: #fff;
+    background-color:var(--prodigies-off-white);
+}
+
+div.bell {
+    position: relative;
+}
+img.bell_active_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+div.bells_container {
+    --prodigies-teal: #00b3b3;
+    --prodigies-red: #C51A21;
+    --prodigies-dark-blue: #0F1C2D;
+    --prodigies-off-white: #EAFFFD;
+    --prodigies-light-blue: #66CCFF;
+    --prodigies-grey: #F4F4F4;
+    --prodigies-yellow: #FFD700;
+    --twenty-percent-black: rgba(0,0,0,0.2);
+    --twenty-percent-white: rgba(255,255,255,0.2);
+}
+
+div.bells_color_scheme_teal {
+    --bells-container-background-color: var(--prodigies-teal);
+    --bells-container-border-color: var(--prodigies-yellow);
+    --bells-container-text-color: var(--prodigies-off-white);
+    --bells-container-active-link-color: var(--bells-container-border-color);
+    --size-option-background-color: var(--twenty-percent-black);
+}
+div.bells_color_scheme_dark_blue {
+    --bells-container-background-color: var(--prodigies-dark-blue);
+    --bells-container-border-color: var(--prodigies-teal);
+    --bells-container-text-color: var(--prodigies-off-white);
+    --bells-container-active-link-color: var(--bells-container-border-color);
+    --size-option-background-color: var(--twenty-percent-white);
+}
+div.bells_color_scheme_light_blue {
+    --bells-container-background-color: var(--prodigies-light-blue);
+    --bells-container-border-color: var(--prodigies-dark-blue);
+    --bells-container-text-color: var(--prodigies-off-white);
+    --bells-container-active-link-color: var(--prodigies-dark-blue);
+    --size-option-background-color: var(--twenty-percent-white);
+}
+div.bells_color_scheme_grey {
+    --bells-container-background-color: var(--prodigies-grey);
+    --bells-container-border-color: transparent;
+    --bells-container-text-color: var(--prodigies-teal);
+    --bells-container-active-link-color: var(--prodigies-dark-blue);
+    --size-option-background-color: var(--prodigies-grey);
+}
+/* sizing options */
+div.bells_container_small_8 {
+    /* --bells-container-height:6rem; */
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container_small_20 {
+    /* --bells-container-height:7.8rem; */
+    
+}
+div.bells_container_small_20 div.bells {
+    margin-top:-6%;
+}
+
+div.bells_size_small {
+    /* --bells-margin-top: -60px;
+    --bells-max-width:1000px; */
+    transition: all 0.5s ease-in-out;
+    /* width:50vw;
+    max-width:50vw; */
+}
+div.bells_container_size_small_8 .bells_container_inner {
+    width:50vw;
+    max-width:50vw;
+}
+div.bells_container_medium_8 {
+    /* --bells-container-height:8rem; */
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container_medium_20 {
+    /* --bells-container-height:11.2rem; */
+    transition: all 0.5s ease-in-out;
+}
+div.bells_size_medium {
+    /* width:70vw;
+    max-width:70vw; */
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container_large_8 {
+    /* --bells-container-height:8.8rem; */
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container_large_20 {
+    /* --bells-container-height:14.3rem; */
+    transition: all 0.5s ease-in-out;
+    padding-top:.7rem;
+}
+div.bells_size_large {
+    /* width:100vw;
+    max-width:100vw; */
+    transition: all 0.5s ease-in-out;
+}
+
+div.bells_container_inner_small {
+    width:45vw;
+    max-width:45vw;
+    min-width:700px;
+    transition: all 0.5s ease-in-out;
+}
+
+div.bells_container_inner_medium {
+    width:70vw;
+    max-width:70vw;
+    min-width:800px;
+    transition: all 0.5s ease-in-out;
+}
+
+div.bells_container_inner_large {
+    width:97.5vw;
+    max-width:97.5vw;
+    /* min-width:1000px; */
+    transition: all 0.5s ease-in-out;
+}
+
+
+div.bells_container {
+    background:var(--bells-container-background-color);
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    /* height:var(--bells-container-height); */
+    /* height:7rem; */
+    /* transition: background-color 0.5s ease; */
+    /* border-top:3px solid var(--bells-container-border-color); */
+    transition: all 0.5s ease-in-out;
+    justify-content:flex-start;
+    display:flex;
+    row-gap:4%;
+    flex-direction:column;
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+}
+
+div.bells_container_inner {
+    /* width:90vw; */
+    margin-left:auto;
+    margin-right:auto;
+    /* padding-top:1%; */
+    transition: all 0.5s ease-in-out;
+}
+
+div .panel_controls {
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:3%;
+    right:0.2%;
+    column-gap:.5rem;
+    row-gap:5%;
+    width:1%;
+    color: var(--bells-container-text-color);
+    justify-content: start;
+    flex-wrap:wrap;
+    z-index:300;
+}
+div.bells_container .panel_controls a {
+    color: var(--bells-container-text-color);
+}
+div.bells_container .panel_controls a:hover {
+    color: var(--bells-container-active-link-color);
+    cursor:pointer;
+}
+div.bells_container .panel_controls a#popout_button {
+    opacity:1;
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container .panel_controls a#help_button {
+    margin-top:.3rem;
+}
+div.bells_container.minimized .panel_controls a#popout_button {
+    opacity:0;
+}
+div.bells_container.minimized .panel_controls a#minimize_button svg {
+    transform:rotate(180deg) scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
+
+.animated_bounce {
+    animation: wiggle 2s infinite ease-in-out;
+
+    transition: all 0.5s ease-in-out;
+}
+.animated_bounce svg {
+    color:#FFD702;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
     }
-</script>
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
-<!--- Start Bell side --->
+@keyframes wiggle {
+    0% {
+      transform: rotate(-3deg) scale(1.3);
+    }
+    20% {
+      transform: rotate(20deg) scale(1.3);
+    }
+    40% {
+      transform: rotate(-15deg) scale(1.4);
+    }
+    60% {
+      transform: rotate(5deg) scale(1.3);
+    }
+    90% {
+      transform: rotate(-1deg) scale(1.3);
+    }
+    100% {
+      transform: rotate(0) scale(1.2);
+    }
+  }
 
-<audio data-key="Digit1" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/i0XOnzxS0GcGKmGs40P7_C.mp3"></audio>
-<audio data-key="Digit2" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Pw0Lc1cPSia0caOEN6Zb_D.mp3"></audio>
-<audio data-key="Digit3" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/XUCIVW41QLL4iHbfxJsQ_E.mp3"></audio>
-<audio data-key="Digit4" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/dWLzNJSNRHebJFPVcEyw_F.mp3"></audio>
-<audio data-key="Digit5" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/m2WEDRnaREmfU08sU8Jz_G.mp3"></audio>
-<audio data-key="Digit6" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/omooYwTBugL1z90K3rQu_A.mp3"></audio>
-<audio data-key="Digit7" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/rhbbZcMTkKDzajK6ut7w_B.mp3"></audio>
-<audio data-key="Digit8" class="bells8_sound" src="https://s3.amazonaws.com/unode1/assets/11794/3ZbKhL8DQ6SE7Y87bFgg_Hi-C.mp3"></audio>
+  @keyframes heyThere {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+/* new help overlay */
+
+div.bells_help_overlay_container {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.3);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    transition: visibility 1s ease-in-out;
+}
+div.bells_help_overlay_inner {
+    background:#0E1C2D;
+    padding: 0rem 1.5rem;
+    border-radius:1rem;
+    border: 5px solid #FFD702;
+    width:80%;
+    max-width:700px;
+    height:auto;
+    max-height:80%;
+    overflow:visible;
+    position:relative;
+    display:none;
+}
+div.bells_help_overlay_content {
+    color:#EAFFFD;
+    padding-bottom:1.5rem;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+div.bells_help_overlay_content h2 {
+    margin-bottom:0;
+    color:#FFD702;
+    font-size:2rem;
+}
+div.bells_help_overlay_content h3 {
+    color:#FFD702;
+    font-size:1.5rem;
+    margin-bottom:0;
+}
+div.bells_help_overlay_content_table {
+    display:flex;
+    flex-direction:column;
+    row-gap:1.3rem;
+    margin-bottom:1rem;
+}
+div.bells_help_overlay_content_table div:first-of-type div {
+    font-weight:bold;
+    font-size:1.2rem;
+    color: #E82829;
+    justify-content:center;
+}
+div.bells_help_overlay_content_table div {
+    display:flex;
+    flex-direction:row;
+    column-gap:2rem;
+    align-items:center;
+    align-items:flex-start;
+}
+div.bells_help_overlay_content_table div > div:first-of-type {
+    font-weight:bold;
+    flex-basis:25%;
+}
+div.bells_help_overlay_content_table div:not(:first-of-type) > div:first-of-type {
+    flex-wrap:wrap;
+    font-family:Monospace;
+    color:#00b3b3;
+}
+div.bells_help_overlay_content_table div > div:last-of-type {
+    flex-basis:75%;
+}
+div.bells_help_overlay_inner .close_button {
+    position:absolute;
+    top:-2%;
+    right:-2%;
+}
+div.bells_help_overlay_inner .close_button_inner {
+    position:relative;
+    width:1.8rem;
+    height:1.8rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    background:#00b3b3;
+    border-radius:50%;
+    border: 4px solid white;
+    padding:.1rem;
+}
+div.bells_help_overlay_inner .close_button_inner a {
+    color: #FFF;
+    text-decoration:none;
+    font-size:1.5rem;
+}
+
+div.bells_container div.help_message {
+    position:absolute;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-wrap:nowrap;
+}
+div.bells_container .panel_controls svg {
+    width:100%;
+    margin:0;
+    padding:0;
+    height:100%;
+    cursor:pointer;
+}
+div#bells_help_button {
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container.minimized {
+    height:5rem;
+    transform:translateY(70%);
+    border:none;
+    background:transparent;
+    color:var(--prodigies-dark-blue);
+}
+div.bells_container a {
+    color:var(--bells-container-text-color);
+    transition: all 0.5s ease-in-out;
+}
+div.bells_container.minimized a {
+    color:var(--prodigies-dark-blue);
+}
+div.bells_container.minimized .bells, div.bells_container.minimized .options {
+    transform:translateY(90%);
+}
+
+div.bell {
+    /* transform:translateY(20px); */
+    width:0;
+    cursor:pointer;
+    transition: all 0.5s ease-in-out;
+}
+div.bell.shown {
+    width:100%;
+    /* transform:translateY(-20px); */
+}
+
+div.bells {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-5%; /* peaking over */
+    /* margin-top: -6.3%; */
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    transition: all 0.5s ease-in-out;
+    width:100%;
+}
+div.bells_top_row {
+    display:flex;
+    margin-top:-1.3%;
+    flex-direction:row;
+    width:92%;
+    column-gap:.5rem;
+    transition: all 2s 0.5s ease-in-out;
+    height:0px;
+}
+div.bells_top_row.shown {
+    transition: all 2s 0.5s ease-in-out;
+    height:auto;
+}
+div.bells_top_row .bell {
+    transform:translateY(20rem) scale(0) rotateX(90deg);
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+    flex-basis:9%;
+    margin-top:-.3%;
+    /* margin-bottom:14%; */
+}
+div.bells_top_row .bell.shown {
+    transform:translateY(2rem) scale(1) rotateX(0);
+    opacity:1;
+    height:auto;
+}
+div.bells_main_row {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    column-gap: 0.5%;
+    margin-top:-.5%;
+    transition: all 0.5s ease-in-out;
+}
+div.bells_main_row, div.bells_top_row {
+    /* max-width: var(--bells-max-width); */
+}
+div.option_row {
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:space-between;
+    width:98.5%;
+    z-index:300;
+}
+div.option_row_small {
+    /* max-width: 1000px; */
+}
+div.option_row_medium {
+    /* max-width: 1400px; */
+}
+div.option_row_large {
+    /* max-width: 1600px; */
+}
+div.bells {
+    /* max-width: var(--bells-max-width); */
+}
+div#bell_size_option {
+    background-color:var(--size-option-background-color);
+    border-radius: .4rem .4rem 0 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap:0rem;
+}
+div#bell_size_option img {
+    cursor:pointer;
+}
+div.bells div.bell img {
+    width: 100%;
+    cursor:pointer;
+}
+/* start bells off screen */
+div.bells div.bell {
+    position:relative;
+    /* bottom:100%; */
+    transition: all 0.5s ease-in-out forwards;
+    /* max-width:200px; */
+}
+/* slide in bell images from the bottom a few milliseconds after page load */
+div.bells div.bell img.bell_image {
+    opacity:0;
+    animation: slideIn 0.5s ease 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity:0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+div.option_row {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    color:var(--bells-container-text-color);
+    font-size:.8rem;
+}
+body#bells_popout div.option_row {
+    font-size:1.2vw;
+    text-align:right;
+    /* max-width:90%; */
+    margin-right:auto;
+    margin-left:auto;
+}
+body#bells_popout div.bells {
+    /* transform:translateY(-1rem); */
+}
+body#bells_popout div.panel_controls {
+    right:1.5vw;
+    transition: all 0.5s ease-in-out;
+}
+body#bells_popout div.panel_controls svg {
+    width: 8vh;
+    max-width: 1.8vw;
+    min-width: .5vw;
+}
+div.option_row svg {
+    cursor:pointer;
+    margin-left:.25rem;
+    margin-right:.25rem;
+    height:98%;
+}
+div.option_row a {
+    color: var(--bells-container-text-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.2em .5em;
+    border-radius: 0.5em .5em 0 0;
+    transition: background-color 0.5s ease;
+}
+div.option_row a:hover {
+    color: var(--bells-container-text-color);
+}
+div.option_row a.active {
+    color: var(--bells-container-active-link-color);
+}
+div.option_row #background_color_option {
+    text-align:center;
+    justify-content:center;
+}
+div.option_row #background_color_option svg.active {
+    border:1px solid white;
+    border-radius:50%;
+}
+
+/* bell group 1 *
+div#bell-low-a-sharp {
+    margin-left:4%;
+    margin-right:4%;
+}
+
+/* bell group 2 *
+div#bell-low-c-sharp {
+    margin-left:4%;
+}
+
+div#bell-low-d-sharp {
+    margin-right:4%;
+}
+
+/* bell group 3 *
+div#bell-f-sharp {
+    margin-left:4%;
+}
+
+div#bell-high-a-sharp {
+    margin-right:4%;
+}
+
+/* bell group 3 *
+div#bell-high-c-sharp {
+    margin-left:4%;
+}
+div#bell-high-d-sharp {
+    margin-right:4%;
+}
+*/
+
+body#bells_popout {
+    height:100%;
+    min-height:100vh;
+}
+
+body#bells_popout .bells_container {
+    height:100%;
+    width:100%;
+    max-width:100vw;
+    justify-content:center;
+}
+body#bells_popout .bells_container_inner {
+    width: 98vw;
+    height:100%;
+    max-width:98vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+body#bells_popout .bells_container .bells {
+    justify-content:center;
+    height:100%;
+    padding:0;
+    margin:0 auto;
+}
+
+/* speech bubble */
+.bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 35%;
+    background: var(--prodigies-yellow);
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    opacity: 0; /* Change display to opacity */
+    visibility: hidden; /* Add visibility property */
+    transition: all 0.5s ease-in-out;
+    bottom: calc(var(--bells-container-height)*1.8);
+    /* when .shown is removed, fade out */
+}
+.bubble.shown {
+    opacity: 1; /* Change display to opacity */
+    visibility: visible; /* Add visibility property */
+    transition: all 0.5s ease-in-out;
+}
+.bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid var(--prodigies-yellow);
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--prodigies-yellow);
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+}
+
+.bubble-bottom-center:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 18px solid var(--prodigies-yellow);
+    border-left: 12px solid transparent;
+    border-top: 12px solid var(--prodigies-yellow);
+    border-bottom: 20px solid transparent;
+    right: 50%;
+    bottom: -24px;
+}
+
+.bubble-bottom-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid var(--prodigies-yellow);
+    border-left: 12px solid transparent;
+    border-top: 12px solid var(--prodigies-yellow);
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+}
+
+#message_1 {
+    transform:translate(-50%, 0%);
+}
+#message_2 {
+    transform:translate(-0%, 0%);
+}
+
+#message_3 {
+    transform:translate(50%, 0%);
+}
 
 
-<div id="belldiv" class="show hidden">
-    <button class="btn btn-open" type="button" id="bellshow"></button>
-    <div class="Bellside text-center">
-        <div class="container">
-            <div class="row" id="instrument">
-                <div class="wrap_bells col-md-6">
-                    <div class="row">
-                        <div id="c" class="box col-3 bells-btn bells-btn-8" data-key="Digit1"></div>
-                        <div id="d" class="box col-3 bells-btn bells-btn-8" data-key="Digit2"></div>
-                        <div id="e" class="box col-3 bells-btn bells-btn-8" data-key="Digit3"></div>
-                        <div id="f" class="box col-3 bells-btn bells-btn-8" data-key="Digit4"></div>
+/* if window is less than 1300 px wide */
+/* @media (max-width: 1300px) {
+    div.bells_container {
+        height: calc(var(--bells-container-height)*0.9);
+    }
+}
+@media (max-width: 1100px) {
+    div.bells_container {
+        height: calc(var(--bells-container-height)*0.8);
+    }
+}
+@media (max-width: 1000px) {
+    div.bells_container {
+        height: calc(var(--bells-container-height)*0.7);
+    }
+}
+@media (max-width: 900px) {
+    div.bells_container {
+        height: calc(var(--bells-container-height)*0.65);
+    }
+}
+@media (max-width: 800px) {
+    div.bells_container {
+        height: calc(var(--bells-container-height)*0.6);
+    }
+} */
+
+/* media max width between 1000 and 1300 */
+@media (max-width: 1770px) {
+    div.bells_container_large_20 {
+        /* --bells-container-height:14.3rem; */
+        transition: all 0.5s ease-in-out;
+        padding-top:0rem;
+    }
+    div.bells_top_row {
+        margin-top:-1%;
+    }
+}
+
+@media (max-width: 1450px) {
+    div.bells_top_row {
+        margin-top:-1.3%;
+    }
+}
+
+@media (max-width: 1000px) {
+    div.bells_container {
+        width: 100%;
+        justify-content: flex-end;
+        padding:0;
+        margin:0;
+        display:flex;
+        /* height: calc(var(--bells-container-height)*0.5); */
+    }
+    div.bells_container_inner {
+        min-width:100% !important;
+    }
+    body#bells_popout .bell {
+        height:100vh;
+        max-height:100vh;
+    }
+    .bells {
+        display:block;
+        width:100%;
+        justify-content:center;
+        align-items:stretch !important;
+        padding:0;
+        margin:0;
+    }
+    .bell {
+        transform:translate(0);
+        margin:0;
+        padding:0;
+        height:auto;
+        display:flex;
+        justify-content:center;
+        color:#FFF;
+        align-items:center;
+        min-width:12.5vw;
+        width:100%;
+        padding-top:2rem;
+        padding-bottom:2rem;
+        border-bottom:5px solid var(--prodigies-teal);
+        /* inset box shadow */
+        box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.05);
+        font-size:1.5rem;
+    }
+    .bell:hover {
+        box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4);
+    }
+    div.bells_main_row {
+        column-gap:0;
+        justify-content:stretch;
+        align-items: stretch;
+    }
+    div.bell img {
+        display:none;
+    }
+    
+    div#bell-c {
+        background:#E82829;
+    }
+    
+    div#bell-c:after {
+        content: "C";
+    }
+    
+    div#bell-d {
+        background:#F39523;
+    }
+    div#bell-d:after {
+        content: "D";
+    }
+    
+    div#bell-e {
+        background:#FDF052;
+        color:#512d1b;
+    }
+    div#bell-e:after {
+        content: "E";
+    }
+    
+    div#bell-f {
+        background:#69BA45;
+    }
+    
+    div#bell-f:after {
+        content: "F";
+    }
+    
+    div#bell-g {
+        background:#019696;
+    }
+    
+    div#bell-g:after {
+        content: "G";
+    }
+    
+    div#bell-a {
+        background:#7A559F;
+    }
+    
+    div#bell-a:after {
+        content: "A";
+    }
+    
+    div#bell-b {
+        background:#EC6CA4;
+    }
+    div#bell-b:hover, div#bell-b .mini_bell_active {
+        background:#ec448d;
+    }
+    
+    div#bell-b:after {
+        content: "B";
+    }
+    
+    div#bell-high-c {
+        background:#C41B1F;
+    }
+    
+    div#bell-high-c:after {
+        content: "C";
+    }
+    
+    div#bell-low-a, div#bell-low-b, div#bell-high-d, div#bell-high-e {
+        display:none;
+    }
+    
+    .panel_controls {
+        opacity:0;
+        visibility:hidden;
+        display: none;
+        height:0 !important;
+    }
+    .option_row {
+        opacity:0;
+        visibility:hidden;
+        height:0;
+        display:none;
+    }
+    div.bells_top_row {
+        display:none;
+        height:0;
+    }
+
+    div.bell {
+        min-width:40px;
+        width:12.5vw;
+    }
+}
+
+/* Fix to make sure bells are over everything else */
+.bells_container {
+    z-index:999;
+}
+</style>
+
+<!-- end bells css -->
+
+    <audio id="bell-low-a-sound" src="https://prodigies.com/bells/mp3/bell_low_a.mp3"></audio>
+        <audio id="bell-low-b-sound" src="https://prodigies.com/bells/mp3/bell_low_b.mp3"></audio>
+        <audio id="bell-c-sound" src="https://prodigies.com/bells/mp3/bell_c.mp3"></audio>
+        <audio id="bell-d-sound" src="https://prodigies.com/bells/mp3/bell_d.mp3"></audio>
+        <audio id="bell-e-sound" src="https://prodigies.com/bells/mp3/bell_e.mp3"></audio>
+        <audio id="bell-f-sound" src="https://prodigies.com/bells/mp3/bell_f.mp3"></audio>
+        <audio id="bell-g-sound" src="https://prodigies.com/bells/mp3/bell_g.mp3"></audio>
+        <audio id="bell-a-sound" src="https://prodigies.com/bells/mp3/bell_a.mp3"></audio>
+        <audio id="bell-b-sound" src="https://prodigies.com/bells/mp3/bell_b.mp3"></audio>
+        <audio id="bell-high-c-sound" src="https://prodigies.com/bells/mp3/bell_high_c.mp3"></audio>
+        <audio id="bell-high-d-sound" src="https://prodigies.com/bells/mp3/bell_high_d.mp3"></audio>
+        <audio id="bell-high-e-sound" src="https://prodigies.com/bells/mp3/bell_high_e.mp3"></audio>
+        
+        <audio id="bell-low-a-sharp-sound" src="https://prodigies.com/bells/mp3/bell_low_a_sharp.mp3"></audio>
+        <audio id="bell-low-c-sharp-sound" src="https://prodigies.com/bells/mp3/bell_c_sharp.mp3"></audio>
+        <audio id="bell-low-d-sharp-sound" src="https://prodigies.com/bells/mp3/bell_low_d_sharp.mp3"></audio>
+        <audio id="bell-f-sharp-sound" src="https://prodigies.com/bells/mp3/bell_f_sharp.mp3"></audio>
+        <audio id="bell-g-sharp-sound" src="https://prodigies.com/bells/mp3/bell_high_g_sharp.mp3"></audio>
+        <audio id="bell-high-a-sharp-sound" src="https://prodigies.com/bells/mp3/bell_high_a_sharp.mp3"></audio>
+        <audio id="bell-high-c-sharp-sound" src="https://prodigies.com/bells/mp3/bell_high_c_sharp.mp3"></audio>
+        <audio id="bell-high-d-sharp-sound" src="https://prodigies.com/bells/mp3/bell_high_d_sharp.mp3"></audio>
+
+        <!-- basic 8 bells-->
+        <div class="bells_container bells_color_scheme_grey bells_container_small_8">
+            <!-- <div class="help_message">
+                <div id="message_1" class="bubble bubble-bottom-left">
+                    Play the bells by clicking on them or using keys 1-8 on your keyboard.
+                </div>
+            </div>
+            <div class="help_message">
+                <div id="message_2" class="bubble bubble-bottom-center">
+                    Adjust the size, color scheme, and number of bells using the controls at the bottom.
+                </div>
+            </div>
+            <div class="help_message">
+                <div id="message_3" class="bubble bubble-bottom-right">
+                    You can also control the settings with your keyboard:<br>
+                    <strong>S</strong>, <strong>M</strong>, <strong>L</strong> - choose between small, medium, and large bells.<br>
+                    <strong>C</strong> - change the color scheme.<br>
+                    <strong>J</strong> - show our 8-bell layout.<br>
+                    <strong>K</strong> - show our 20-bell layout.<br>
+                </div>
+            </div> -->
+            <div class="panel_controls">
+                <a href="#" id="minimize_button"><svg  viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracurrentColorerCarrier" stroke-linecurrentcap="round" stroke-linejoin="round"></g><g id="SVGRepo_icurrentColoronCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="currentColor"></path></g></svg></a>
+                <a href="#" id="popout_button"><svg fill="currentColor"  viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracurrentColorerCarrier" stroke-linecurrentcap="round" stroke-linejoin="round"></g><g id="SVGRepo_icurrentColoronCarrier"> <title>pop-out-line</title> <path currentclass="currentColorlr-i-outline currentColorlr-i-outline-path-1" d="M27,33H5a2,2,0,0,1-2-2V9A2,2,0,0,1,5,7H15V9H5V31H27V21h2V31A2,2,0,0,1,27,33Z"></path><path currentclass="currentColorlr-i-outline currentColorlr-i-outline-path-2" d="M18,3a1,1,0,0,0,0,2H29.59L15.74,18.85a1,1,0,1,0,1.41,1.41L31,6.41V18a1,1,0,0,0,2,0V3Z"></path> <recurrentct x="0" y="0" fill-opacurrentcity="0"></recurrentct> </g></svg></a>
+                <a href="#" id="help_button"><svg id="help_button_svg" fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.774 27.774" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M10.398,22.811h4.618v4.964h-4.618V22.811z M21.058,1.594C19.854,0.532,17.612,0,14.33,0c-3.711,0-6.205,0.514-7.482,1.543 c-1.277,1.027-1.916,3.027-1.916,6L4.911,8.551h4.577l-0.02-1.049c0-1.424,0.303-2.377,0.907-2.854 c0.604-0.477,1.814-0.717,3.632-0.717c1.936,0,3.184,0.228,3.74,0.676c0.559,0.451,0.837,1.457,0.837,3.017 c0,1.883-0.745,3.133-2.237,3.752l-1.797,0.766c-1.882,0.781-3.044,1.538-3.489,2.27c-0.442,0.732-0.665,2.242-0.665,4.529h4.68 v-0.646c0-1.41,0.987-2.533,2.965-3.365c2.03-0.861,3.343-1.746,3.935-2.651c0.592-0.908,0.888-2.498,0.888-4.771 C22.863,4.625,22.261,2.655,21.058,1.594z"></path> </g> </g></svg></a>
+            </div>
+            <div class="bells_container_inner bells_container_inner_small">
+                <div class="bells">
+                    <div class="bells_top_row">
+                        <div class="bell" id="bell-low-a-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_low_a_sharp.png" draggable="false" alt="A Sharp / B Flat Bell" id="image-bell-low-a-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_low_a_sharp_active.png" draggable="false" alt="A Sharp / B Flat Bell Active" id="image-bell-low-a-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+
+                        <div class="bell spacer"> &nbsp; </div>
+                
+                        <div class="bell" id="bell-c-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_c_sharp.png" draggable="false" alt="C Sharp / D Flat Bell" id="image-bell-c-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_c_sharp_active.png" draggable="false" alt="C Sharp / D Flat Bell Active" id="image-bell-c-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-low-d-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_d_sharp.png" draggable="false" alt="D Sharp / E Flat Bell" id="image-bell-low-d-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_d_sharp_active.png" draggable="false" alt="D Sharp / E Flat Bell Active" id="image-bell-low-d-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                
+                        <div class="bell spacer"> &nbsp; </div>
+
+                        <div class="bell" id="bell-f-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_f_sharp.png" draggable="false" alt="F Sharp / G Flat Bell" id="image-bell-f-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_f_sharp_active.png" draggable="false" alt="F Sharp / G Flat Bell Active" id="image-bell-f-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-g-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_g_sharp.png" draggable="false" alt="G Sharp / A Flat Bell" id="image-bell-g-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_g_sharp_active.png" draggable="false" alt="G Sharp / A Flat Bell Active" id="image-bell-g-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-high-a-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_a_sharp.png" draggable="false" alt="A Sharp / B Flat Bell" id="image-bell-high-a-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_a_sharp_active.png" draggable="false" alt="A Sharp / B Flat Bell Active" id="image-bell-high-a-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+
+                        <div class="bell spacer"> &nbsp; </div>
+                
+                        <div class="bell" id="bell-high-c-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_c_sharp.png" draggable="false" alt="C Sharp / D Flat Bell" id="image-bell-high-c-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_c_sharp_active.png" draggable="false" alt="C Sharp / D Flat Bell Active" id="image-bell-high-c-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-high-d-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_d_sharp.png" draggable="false" alt="D Sharp / E Flat Bell" id="image-bell-high-d-sharp">
+                            <img src="https://prodigies.com/bells/images/bell_high_d_sharp_active.png" draggable="false" alt="D Sharp / E Flat Bell Active" id="image-bell-high-d-sharp-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                    </div>
+                
+                    <div class="bells_main_row">
+                        <div class="bell" id="bell-low-a">
+                            <img src="https://prodigies.com/bells/images/bell_low_a.png" draggable="false" alt="First A Bell" id="image-bell-low-a">
+                            <img src="https://prodigies.com/bells/images/bell_low_a_active.png" draggable="false" alt="First A Bell Active" id="image-bell-low-a-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-low-b">
+                            <img src="https://prodigies.com/bells/images/bell_b.png" draggable="false" alt="First B Bell" id="image-bell-low-b">
+                            <img src="https://prodigies.com/bells/images/bell_b_active.png" draggable="false" alt="First B Bell Active" id="image-bell-low-b-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <!-- core bells -->
+                        <div class="bell shown" id="bell-c">
+                            <img src="https://prodigies.com/bells/images/bell_c.png" draggable="false" alt="C Bell" id="image-bell-c" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_c_active.png" draggable="false" alt="C Bell Active" id="image-bell-c-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-d">
+                            <img src="https://prodigies.com/bells/images/bell_d.png" draggable="false" alt="D Bell" id="image-bell-d" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_d_active.png" draggable="false" alt="D Bell Active" id="image-bell-d-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-e">
+                            <img src="https://prodigies.com/bells/images/bell_e.png" draggable="false" alt="E Bell" id="image-bell-e" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_e_active.png" draggable="false" alt="E Bell Active" id="image-bell-e-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-f">
+                            <img src="https://prodigies.com/bells/images/bell_f.png" draggable="false" alt="F Bell" id="image-bell-f" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_f_active.png" draggable="false" alt="F Bell Active" id="image-bell-f-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-g">
+                            <img src="https://prodigies.com/bells/images/bell_g.png" draggable="false" alt="G Bell" id="image-bell-g" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_g_active.png" draggable="false" alt="G Bell Active" id="image-bell-g-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-a">
+                            <img src="https://prodigies.com/bells/images/bell_a.png" draggable="false" alt="A Bell" id="image-bell-a" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_a_active.png" draggable="false" alt="A Bell Active" id="image-bell-a-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-b">
+                            <img src="https://prodigies.com/bells/images/bell_b.png" draggable="false" alt="B Bell" id="image-bell-b" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_b_active.png" draggable="false" alt="B Bell Active" id="image-bell-b-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell shown" id="bell-high-c">
+                            <img src="https://prodigies.com/bells/images/bell_high_c.png" draggable="false" alt="High C Bell" id="image-bell-high-c" class="bell_image">
+                            <img src="https://prodigies.com/bells/images/bell_high_c_active.png" draggable="false" alt="High C Bell Active" id="image-bell-high-c-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <!-- end core bells-->
+                        <div class="bell" id="bell-high-d">
+                            <img src="https://prodigies.com/bells/images/bell_high_d.png" draggable="false" alt="High D Bell" id="image-bell-high-d">
+                            <img src="https://prodigies.com/bells/images/bell_high_d_active.png" draggable="false" alt="High D Bell Active" id="image-bell-high-d-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                        <div class="bell" id="bell-high-e">
+                            <img src="https://prodigies.com/bells/images/bell_high_e.png" draggable="false" alt="High E Bell" id="image-bell-high-e">
+                            <img src="https://prodigies.com/bells/images/bell_high_e_active.png" draggable="false" alt="High E Bell Active" id="image-bell-high-e-active" style="opacity:0" class="bell_active_image">
+                        </div>
+                    </div>
+                </div> <!-- end bells -->
+
+                <div class="option_row option_row_small">
+
+                    <div class="option" id="bell_size_option">
+                        <a href="#" id="bell_size_small" class="active">S</a> <a href="#" id="bell_size_medium">M</a> <a href="#" id="bell_size_large">L</a>
+                    </div>
+                    <div class="option" id="background_color_option">
+                        <svg id="dot_grey" width="20" height="20" stroke="grey" stroke-width="1">
+                            <circle cx="10" cy="10" r="10" fill="var(--prodigies-grey)" />
+                        </svg>
+                        <svg id="dot_teal" width="20" height="20" stroke="white" stroke-width="1">
+                            <!-- circle with white border -->
+                            <circle cx="10" cy="10" r="10" fill="var(--prodigies-teal)"/>
+                        </svg>
+                        <svg id="dot_dark_blue" width="20" height="20"  stroke="white" stroke-width="1">
+                            <circle cx="10" cy="10" r="10" fill="var(--prodigies-dark-blue)" />
+                        </svg>
+                        <svg id="dot_light_blue" width="20" height="20"  stroke="white" stroke-width="1">
+                            <circle cx="10" cy="10" r="10" fill="var(--prodigies-light-blue)" />
+                        </svg>
+
+                    </div>
+                    <div class="option" id="bell_count_option">
+                        <a href="#" id="bell_count_8" class="active">8</a> <a href="#" id="bell_count_20">20</a>
                     </div>
                 </div>
-                <div class="wrap_bells second_row_of_bells col-md-6">
-                    <div class="row">
-                        <div id="g" class="box col-3 bells-btn bells-btn-8" data-key="Digit5"></div>
-                        <div id="a" class="box col-3 bells-btn bells-btn-8" data-key="Digit6"></div>
-                        <div id="b" class="box col-3 bells-btn bells-btn-8" data-key="Digit7"></div>
-                        <div id="hic" class="box col-3 bells-btn bells-btn-8" data-key="Digit8"></div>
+            </div>
+        </div>
+        <div class="bells_help_overlay_container">
+            <div class="bells_help_overlay_inner">
+                <div class="close_button">
+                    <div class="close_button_inner">
+                        <a href="#" id="bells_help_overlay_close">X</a>
                     </div>
                 </div>
+                <div class="bells_help_overlay_content">
+
+                    <h2>How to Play the Bells</h2>
+                    <p>Play the bells by clicking on them or using keys 1-8 on your keyboard.
+                    Adjust the size, color scheme, and number of bells using the controls at the bottom.</p>
+                    <h3>Using Your Keyboard</h3>
+                    <p>You can also control the settings with your keyboard:</p>
+                    <div class="bells_help_overlay_content_table">
+                        <div>
+                            <div>Keys</div>
+                            <div>Function</div>
+                        </div>
+                        <div>
+                            <div>
+                                1-8
+                            </div>
+                            <div>
+                                8-Bell Layout:Plays the bells correspong to that key.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                2, 4, 5, 7, 8, 9, -, =
+                            </div>
+                            <div>
+                                20-Bell Layout: Plays the bells correspong to that key in the top row.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Q-]
+                            </div>
+                            <div>
+                                20-Bell Layout: Plays the bells correspong to that key in the bottom row.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                S, M, L
+                            </div>
+                            <div>
+                                Changes the size of the bells.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                C
+                            </div>
+                            <div>
+                                Advanced through the available color schemes.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                J
+                            </div>
+                            <div>
+                                Changes to the 8-bell layout.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                K
+                            </div>
+                            <div>
+                                Expands to the 20-bell layout.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                ?
+                            </div>
+                            <div>
+                                Shows the help screen (escape key then hides it again).
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                F
+                            </div>
+                            <div>
+                                Toggles the pop-out version of the bells.
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                H
+                            </div>
+                            <div>
+                                Minimizes/hides the bells, and shows them again. Also returns to regular mode when in pop-out mode.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <small>To use the bells, click on them first. Then use keys 1-8 to play the bells on your keyboard.</small>
         </div>
-    </div>
-</div>
-<!--- End Bell side --->
 
-<!--- Start Bell side 20 --->
+<!-- start bells JS and dependencies -->
 
-<audio data-key="Digit2" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/rr6uOBikScq2hFHwN30a_1-LowASharpBellSound.mp3"></audio>
-<audio data-key="Digit4" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/3cROCFcmSLahaQjcSTfQ_2-CSharpBellSound.mp3"></audio>
-<audio data-key="Digit5" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/CgGAKc4Siq3nyGUtcWET_3-DSharpBellSound.mp3"></audio>
-<audio data-key="Digit7" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/wU5yvfChQlOHJgxwZOmz_4-FSharpBellSound.mp3"></audio>
-<audio data-key="Digit8" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/j4BZEpZYQqeFZETZo0S3_6-ASharpBellSound.mp3"></audio>
-<audio data-key="Digit9" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/ZFll1YhTSfeHjpDk4xeV_5-GSharpBellSound.mp3"></audio>
-<audio data-key="Minus" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/ukQJAaREQqasPENUdY0j_7-HighCSharpBellSound.mp3"></audio>
-<audio data-key="Equal" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Q2686BfiQ6oqe1ogb4iG_8-HighDSharpBellSound.mp3"></audio>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="https://prodigies.com/bells/bells.js" async></script>
+
+<!-- end bells JS and dependencies -->
+
+<!-- END BELLS -->
 
 
 
-
-<audio data-key="KeyQ" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/pSu2Q9rTyi6EGkKYdUI4_1-LowABellSound.mp3"></audio>
-<audio data-key="KeyW" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/1Q7DLG0MROOaf1aPsSZF_2-LowBBellSound.mp3"></audio>
-<audio data-key="KeyE" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/g7f9S3o6TrGnSGGMaRaB_3-CBellSound.mp3"></audio>
-<audio data-key="KeyR" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/Cv1kqM8HTMKhrioF67AY_4-DBellSound.mp3"></audio>
-<audio data-key="KeyT" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/a0NPdn29R69dL01wv9Ak_5-EBellSound.mp3"></audio>
-<audio data-key="KeyY" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/p1jokNmVTh67AtjJw7On_6-FBellSound.mp3"></audio>
-<audio data-key="KeyU" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/2EWfSM8TrKAZseeTK82U_7-GBellSound.mp3"></audio>
-<audio data-key="KeyI" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/F6zEpjrRei2iO2SC6Jdg_8-ABellSound.mp3"></audio>
-<audio data-key="KeyO" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/hSUuBvBQoq09vebcpi2Q_9-BBellSound.mp3"></audio>
-<audio data-key="KeyP" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/qoI1viEHRyiyxhITDqj0_10-HighCBellSound.mp3"></audio>
-<audio data-key="BracketLeft" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/MGQkhn0zQ2s8Z02OaWgJ_11-HighDBellSound.mp3"></audio>
-<audio data-key="BracketRight" class="bells20_sound" src="https://s3.amazonaws.com/unode1/assets/11794/FdMQNZwQPqWBh4eGREvb_12-HighEBellSound.mp3"></audio>
-
-
-<div id="belldiv20" class="show hidden">
-  <button class="btn btn-open" type="button" id="bellshow20"></button>
-  <div class="Bellside text-center">
-      <div class="container container-bells20">
-        <div class="bells-wrap">
-          <div class="bells-row top-row">
-            <div id="a-sharp-low" class="bells-btn bells-btn-20" data-key="Digit2"></div>
-            <div class="item-row">
-              <div id="c-sharp" class="bells-btn bells-btn-20" data-key="Digit4"></div>
-              <div id="d-sharp" class="bells-btn bells-btn-20" data-key="Digit5"></div>
-            </div>
-            <div class="item-row">
-              <div id="f-sharp" class="bells-btn bells-btn-20" data-key="Digit7"></div>
-              <div id="g-sharp" class="bells-btn bells-btn-20" data-key="Digit8"></div>
-              <div id="a-sharp" class="bells-btn bells-btn-20" data-key="Digit9"></div>
-            </div>
-            <div class="item-row">
-              <div id="c-sharp-high" class="bells-btn bells-btn-20" data-key="Minus"></div>
-              <div id="d-sharp-high" class="bells-btn bells-btn-20" data-key="Equal"></div>
-            </div>
-          </div>
-          <div class="bells-row bottom-row">
-            <div id="a-low" class="bells-btn bells-btn-20" data-key="KeyQ"></div>
-            <div id="b-low" class="bells-btn bells-btn-20" data-key="KeyW"></div>
-            <div id="c" class="bells-btn bells-btn-20" data-key="KeyE"></div>
-            <div id="d" class="bells-btn bells-btn-20" data-key="KeyR"></div>
-            <div id="e" class="bells-btn bells-btn-20" data-key="KeyT"></div>
-            <div id="f" class="bells-btn bells-btn-20" data-key="KeyY"></div>
-            <div id="g" class="bells-btn bells-btn-20" data-key="KeyU"></div>
-            <div id="a" class="bells-btn bells-btn-20" data-key="KeyI"></div>
-            <div id="b" class="bells-btn bells-btn-20" data-key="KeyO"></div>
-            <div id="c-high" class="bells-btn bells-btn-20" data-key="KeyP"></div>
-            <div id="d-high" class="bells-btn bells-btn-20" data-key="BracketLeft"></div>
-            <div id="e-high" class="bells-btn bells-btn-20" data-key="BracketRight"></div>
-          </div>
-        </div>
-        <small>To use the bells, click them or use keys Q through P to play the bottom row and the numbers 2 through + to play the top row</small>
-      </div>
-    </div>
-</div>
-
-<!--- End Bell side 20 --->
-
-<!--{{ 'index_1.js' | javascript_link }}-->
-<script>
-  var parts_player;
-    var live_nodes =0;
-    console.log("about to create player");
-    <!--$(document).ready(function () {-->
-    <!--  parts_player = new PartsPlayer();-->
-    <!--  parts_player.load_parts_player_audio();-->
-    <!--})-->
-</script>
-
-{{ 'custom-bells20.css' | stylesheet_link }}
-{{ 'custom-bells20-scripts.js' | javascript_link }}
-{{ 'custom_scripts.js' | javascript_link }}
 
 </body>
 
